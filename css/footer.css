@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.footer_wrapper {
+	width: 100%;
+	background: url("../img/footer_backgr.jpg") no-repeat 50% 50% rgb(220, 20,60);
+	background-size: cover;
+}
+
+.footer_wrapper > div {
+	max-width: 1170px;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+
+footer h3 {
+	font : normal 32px/32px "Assistant-ExtraLight", Arial, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+ul.contacts {
+	font : normal 21px/33px "Assistant-ExtraLight", Arial, sans-serif;
+	text-align: center;
+}
+
+ul.contacts > li {
+	display: inline;
+	position: relative;
+	margin: 5px;
+	text-align: center;
+	padding: 3px 5px;
+	white-space: nowrap;
+}
+
+ul.contacts > li::after {
+	position: absolute;
+	content: "";
+	box-sizing: border-box;
+	width: 1px;
+	height: 100%;
+	border: 1px solid rgba(51, 51, 51, 0.5);
+	right: -5px;
+}
+
+li.nostripe::after {
+	display: none;
+}
+
+.copyright {
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.copyright > p {
+	font : normal 20px/25px "Assistant-ExtraLight", Arial, sans-serif;
+	text-align: center;
+}
+
+@media only screen and (min-width: 1041px) {
+	.footer_wrapper {
+		padding: 50px 90px;
+	}
+
+	.copyright > p {
+		font : normal 20px/25px "Assistant-ExtraLight", Arial, sans-serif;
+	}
+}
+
+@media (min-width: 721px) and (max-width: 1041px) {
+	.footer_wrapper {
+		padding: 40px 30px;
+	}
+
+	.copyright > p {
+		font : normal 16px/25px "Assistant-ExtraLight", Arial, sans-serif;
+	}
+}
+
+@media (min-width: 481px) and (max-width: 720px) {
+	.footer_wrapper {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.copyright > p {
+		font : normal 14px/25px "Assistant-ExtraLight", Arial, sans-serif;
+	}
+}
+
+@media (max-width: 480px) {
+	.footer_wrapper {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	ul.contacts {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.copyright > p {
+		font : normal 12px/25px "Assistant-ExtraLight", Arial, sans-serif;
+	}
+}

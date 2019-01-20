@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+@font-face {
+    	font-family : "Assistant-ExtraLight";
+    	src : url("../fonts/Assistant-ExtraLight.eot");
+    	src : url("../fonts/Assistant-ExtraLight.eot?#iefix") format("embedded-opentype"),
+    		url("../fonts/Assistant-ExtraLight.woff") format("woff"),
+    		url("../fonts/Assistant-ExtraLight.ttf") format("truetype"),
+			url("../fonts/Assistant-ExtraLight.otf") format("opentype");
+   		font-style : normal;
+    	font-weight : normal;
+		}
