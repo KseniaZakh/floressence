@@ -22,27 +22,32 @@ footer {
 }
 
 footer h3 {
-	font : normal 32px/32px "Assistant-ExtraLight", Arial, sans-serif;
+	font : normal 32px/32px "Roboto Condensed", Arial, sans-serif;
+	font-weight: 300;
 	text-align: center;
 	text-transform: uppercase;
 	margin-bottom: 15px;
 }
 
 ul.contacts {
-	font : normal 21px/33px "Assistant-ExtraLight", Arial, sans-serif;
+	max-width: 90%;
+	font : normal 21px/33px "Roboto Condensed", Arial, sans-serif;
+	font-weight: 300;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 }
 
 ul.contacts > li {
 	display: inline;
 	position: relative;
-	margin: 5px;
+	margin: 5px 5px 5px -5px;
 	text-align: center;
-	padding: 3px 5px;
+	/* padding: 3px 5px; */
 	white-space: nowrap;
 }
 
-ul.contacts > li::after {
+/* ul.contacts > li::after {
 	position: absolute;
 	content: "";
 	box-sizing: border-box;
@@ -54,7 +59,7 @@ ul.contacts > li::after {
 
 li.nostripe::after {
 	display: none;
-}
+} */
 
 .copyright {
 	width: 100%;
@@ -63,7 +68,8 @@ li.nostripe::after {
 }
 
 .copyright > p {
-	font : normal 20px/25px "Assistant-ExtraLight", Arial, sans-serif;
+	font : normal 20px/25px "Roboto Condensed", Arial, sans-serif;
+	font-weight: 300;
 	text-align: center;
 }
 
@@ -73,7 +79,8 @@ li.nostripe::after {
 	}
 
 	.copyright > p {
-		font : normal 20px/25px "Assistant-ExtraLight", Arial, sans-serif;
+		font : normal 20px/25px "Roboto Condensed", Arial, sans-serif;
+		font-weight: 300;
 	}
 }
 
@@ -83,7 +90,8 @@ li.nostripe::after {
 	}
 
 	.copyright > p {
-		font : normal 16px/25px "Assistant-ExtraLight", Arial, sans-serif;
+		font : normal 16px/25px "Roboto Condensed", Arial, sans-serif;
+		font-weight: 300;
 	}
 }
 
@@ -91,10 +99,6 @@ li.nostripe::after {
 	.footer_wrapper {
 		padding-top: 30px;
 		padding-bottom: 30px;
-	}
-
-	.copyright > p {
-		font : normal 14px/25px "Assistant-ExtraLight", Arial, sans-serif;
 	}
 }
 
@@ -108,8 +112,11 @@ li.nostripe::after {
 		margin-left: 20px;
 		margin-right: 20px;
 	}
+}
 
+@media (max-width: 720px) {
 	.copyright > p {
-		font : normal 12px/25px "Assistant-ExtraLight", Arial, sans-serif;
+		font : normal 14px/25px "Roboto Condensed", Arial, sans-serif;
+		font-weight: 300;
 	}
 }
