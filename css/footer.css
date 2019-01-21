@@ -8,7 +8,7 @@ footer {
 
 .footer_wrapper {
 	width: 100%;
-	background: url("../img/footer_backgr.jpg") no-repeat 50% 50% rgb(220, 20,60);
+	background: url("../img/footer_backgr.jpg") no-repeat 50% 50% rgba(220, 20,60, 1);
 	background-size: cover;
 }
 
@@ -16,14 +16,14 @@ footer {
 	max-width: 1170px;
 	background-color: rgba(255, 255, 255, 0.8);
 	padding-top: 30px;
-	padding-bottom: 50px;
+	padding-bottom: 30px;
 	margin-left: auto;
 	margin-right: auto;
+	/* overflow: hidden; */
 }
 
 footer h3 {
-	font : normal 32px/32px "Roboto Condensed", Arial, sans-serif;
-	font-weight: 300;
+	font : normal 32px/32px "Light", Arial, sans-serif;
 	text-align: center;
 	text-transform: uppercase;
 	margin-bottom: 15px;
@@ -31,8 +31,7 @@ footer h3 {
 
 ul.contacts {
 	max-width: 90%;
-	font : normal 21px/33px "Roboto Condensed", Arial, sans-serif;
-	font-weight: 300;
+	font : normal 21px/33px "Light", Arial, sans-serif;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -41,25 +40,19 @@ ul.contacts {
 ul.contacts > li {
 	display: inline;
 	position: relative;
-	margin: 5px 5px 5px -5px;
+	margin: 5px;
 	text-align: center;
-	/* padding: 3px 5px; */
-	white-space: nowrap;
 }
 
-/* ul.contacts > li::after {
+ul.contacts > li:not(:first-child)::before {
+	content: "\0000a0|\0000a0";
 	position: absolute;
-	content: "";
-	box-sizing: border-box;
 	width: 1px;
-	height: 100%;
-	border-left: 1px solid rgba(51, 51, 51, 0.5);
-	right: -5px;
+	height: inherit;
+	border-left: rgba(51, 51, 51, 1);
+	left: -15px;
+	top: -5px;
 }
-
-li.nostripe::after {
-	display: none;
-} */
 
 .copyright {
 	width: 100%;
@@ -68,44 +61,55 @@ li.nostripe::after {
 }
 
 .copyright > p {
-	font : normal 20px/25px "Roboto Condensed", Arial, sans-serif;
-	font-weight: 300;
+	font : normal 20px/25px "Light", Arial, sans-serif;
 	text-align: center;
 }
 
-@media only screen and (min-width: 1041px) {
-	.footer_wrapper {
-		padding: 50px 90px;
-	}
-
-	.copyright > p {
-		font : normal 20px/25px "Roboto Condensed", Arial, sans-serif;
-		font-weight: 300;
-	}
-}
-
-@media (min-width: 721px) and (max-width: 1041px) {
-	.footer_wrapper {
-		padding: 40px 30px;
-	}
-
-	.copyright > p {
-		font : normal 16px/25px "Roboto Condensed", Arial, sans-serif;
-		font-weight: 300;
-	}
-}
-
-@media (min-width: 481px) and (max-width: 720px) {
+@media (min-width: 1401px) {
 	.footer_wrapper {
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
 }
 
+@media (min-width: 1041px) and (max-width: 1400px) {
+	.footer_wrapper {
+		padding: 25px 50px;
+	}
+}
+
+@media only screen and (min-width: 1041px) {
+	.copyright > p {
+		font : normal 20px/25px "Light", Arial, sans-serif;
+	}
+}
+
+@media (min-width: 721px) and (max-width: 1041px) {
+	.footer_wrapper {
+		padding: 20px 40px;
+	}
+
+	.copyright > p {
+		font : normal 16px/25px "Light", Arial, sans-serif;
+	}
+}
+
+@media (min-width: 481px) and (max-width: 720px) {
+	.footer_wrapper {
+		padding: 15px 30px;
+	}
+
+}
+
+@media (min-width: 361px) {
+	ul.contacts > li {
+		white-space: nowrap;
+	}
+}
+
 @media (max-width: 480px) {
 	.footer_wrapper {
-		padding-top: 20px;
-		padding-bottom: 20px;
+		padding: 10px 20px;
 	}
 
 	ul.contacts {
@@ -116,7 +120,6 @@ li.nostripe::after {
 
 @media (max-width: 720px) {
 	.copyright > p {
-		font : normal 14px/25px "Roboto Condensed", Arial, sans-serif;
-		font-weight: 300;
+		font : normal 14px/25px "Light", Arial, sans-serif;
 	}
 }
