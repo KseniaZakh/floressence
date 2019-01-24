@@ -7,9 +7,11 @@ header {
 	background-color: rgba(255, 255, 255, 1);
 	top: 0;
 	left: 0;
+	z-index: 10;
 }
 
 .header_wrap {
+	position: relative;
 	max-width: 1170px;
 	height: inherit;
 	margin-left: auto;
@@ -25,8 +27,8 @@ ul.mob_menu {
 	position: absolute;
 	width: 40px;
 	height: 25px;
-	top: 20px;
-	right: 10%;
+	top: 22px;
+	right: 80px;
 	overflow: hidden;
 }
 
@@ -36,28 +38,74 @@ ul.mob_menu:hover {
 
 ul.mob_menu > li {
 	position: inherit;
-	width: 100%;
 	height: 4px;
 	background-color: rgba(255, 10, 10, 1);
 	left: 0;
 	border-radius: 2px;
-	transition: all 0.25s;
+	transition: all 0.5s;
 }
 
 ul.mob_menu > li:first-child,
 ul.mob_menu > li:nth-child(2) {
 	top: 10px;
+	width: 66%;
+}
+
+ul.mob_menu:hover > li:first-child,
+ul.mob_menu:hover > li:nth-child(2) {
+	width: 100%;
 }
 
 ul.mob_menu > li:nth-child(3) {
 	top: 0;
+	width: 33%;
+}
+
+ul.mob_menu:hover > li:nth-child(3) {
+	width: 100%;
 }
 
 ul.mob_menu > li:last-child {
 	bottom: 0;
+	width: 100%;
 }
 
+ul.language {
+	position: absolute;
+	top: 22px;
+	right: 20px;
+}
 
+ul.language > li {
+	width: 40px;
+	height: 25px;
+}
+
+ul.language > li:not(:first-child) {
+	display: none;
+	margin-top: 5px;
+}
+
+ul.language > li > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+li.rus > a {
+	background: url("../img/rus.svg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+li.eng > a {
+	background: url("../img/en.svg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+li.fr > a {
+	background: url("../img/fr.svg") no-repeat 50% 50%;
+	background-size: cover;
+}
 
 @media (min-width: 1041px) {
 	a.logo {
@@ -74,7 +122,7 @@ ul.mob_menu > li:last-child {
 @media (max-width: 1040px) {
 	a.logo {
 		background: url("../img/logo_mob.jpg") no-repeat 50% 50%;
-		background-size: contain;
+		background-size: 100%;
 	}
 
 		ul.mob_menu.opened > li:first-child {
@@ -127,6 +175,6 @@ ul.mob_menu > li:last-child {
 	}
 
 	a.logo {
-		width: 70%;
+		width: 50%;
 	}
 }
