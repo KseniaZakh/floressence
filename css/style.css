@@ -9,15 +9,11 @@ div.container {
 }
 
 a {
+	display: block;
 	text-decoration: none;
-	color: rgba(214, 0, 0, 1);
-	transition : all 0.25s ease;
+	color: inherit;
 }
 
 ul {
 	list-style: none;
-}
-
-a:hover {
-	color: rgba(169, 0, 0, 1)
 }
