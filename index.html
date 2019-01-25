@@ -7,8 +7,8 @@
 		<link rel="stylesheet" href="css/default.css" />
 		<link rel="stylesheet" href="css/fonts.css" />
 		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/header.css" />
 		<link rel="stylesheet" href="css/nav.css" />
+		<link rel="stylesheet" href="css/header.css" />
 		<link rel="stylesheet" href="css/footer.css" />
 		<script defer src="js/jquery.js"></script>
 		<script defer src="js/common.js"></script>
@@ -17,14 +17,27 @@
 
 	<body onload="resize();" onresize="resize();">
 		<div class="container">
+			<nav class="desktop mob">
+				<ul>
+					<li><a class="menu_actual" href="#" title="Главная">Главная</a></li>
+					<li><a href="#" title="Продукция">Продукция</a></li>
+					<li><a href="#" title="О компании">О компании</a></li>
+					<li><a href="#" title="Качество">Качество</a></li>
+					<li><a href="#" title="Разработки">Разработки</a></li>
+				</ul>
+			</nav>
+
 			<header>
 				<div class="header_wrap">
 					<a class="logo" href="https://www.floressence.fr" title="Слоган компании?"></a>
-					<ul class="language">
-						<li class="lang_actual rus"><a href="#" title="Русский"></a></li>
+					<div class="lang">
+						<span></span>
+					</div>
+					<ul class="lang_choice">
 						<li class="eng"><a href="https://www.floressence.fr/en/" title="English"></a></li>
 						<li class="fr"><a href="https://www.floressence.fr/fr/" title="French"></a></li>
 					</ul>
+
 					<ul class="mob_menu">
 						<li></li>
 						<li></li>
@@ -33,16 +46,6 @@
 					</ul>
 				</div>
 			</header>
-
-			<!-- <nav class="desktop mob">
-				<ul>
-					<li><a class="menu_actual" href="#" title="Главная">Главная</a></li>
-					<li><a href="#" title="Продукция">Продукция</a></li>
-					<li><a href="#" title="О компании">О компании</a></li>
-					<li><a href="#" title="Качество">Качество</a></li>
-					<li><a href="#" title="Разработки">Разработки</a></li>
-				</ul>
-			</nav> -->
 
 			<div class="telo">
 			</div>

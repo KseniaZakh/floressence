@@ -3,8 +3,8 @@ function resize() {
 }
 
 $(document).ready(function() {
-	$("ul.language > li:first-child").on("click", function() {
-		$("ul.language > li:not(:first-child)").toggle();
+	$("div.lang"). on("click", function() {
+	$("ul.lang_choice").slideToggle(500);
 	})
 
 	$("ul.mob_menu").click(function() {

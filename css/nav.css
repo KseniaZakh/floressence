@@ -2,22 +2,10 @@
 
 nav {
 	position: fixed;
-	top: 0;
-	min-width: 658px;
-	max-width: 819px;
-	left: 35%;
-	z-index: 15;
 }
 
-nav > ul {
-	display: flex;
+nav  ul {
 	width: 100%;
-}
-
-nav > ul > li {
-	flex: 1 1 auto;
-	font : normal 20px/70px "Light", Arial, sans-serif;
-	text-transform: uppercase;
 }
 
 nav a.menu_actual {
@@ -28,16 +16,24 @@ nav a:hover {
 	color: rgba(230, 46, 46, 1);
 }
 
-@media (min-width: 1401px) {
-
-}
-
-@media (min-width: 1041px) and (max-width: 1400px) {
-
+@media (min-width: 1041px) {
+	nav {
+		top: 20px;
+		left: calc(50% - 210px);
+		width: 560px;
+		z-index: 11;
+	}
+	nav ul > li {
+		display: inline-block;
+		font : normal 20px/30px "Light", Arial, sans-serif;
+		text-transform: uppercase;
+		margin-right: 10px;
+	}
 }
 
 @media (max-width: 1040px) {
 	nav {
 		display: none;
 	}
+
 }

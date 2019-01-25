@@ -8,26 +8,29 @@ header {
 	top: 0;
 	left: 0;
 	z-index: 10;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .header_wrap {
 	position: relative;
 	max-width: 1170px;
-	height: inherit;
+	height: 50px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 a.logo {
 	display: block;
-	height: 100%;
+	position: relative;
+	height: 50px;
 }
 
 ul.mob_menu {
 	position: absolute;
 	width: 40px;
-	height: 25px;
-	top: 22px;
+	height: 30px;
+	top: 10px;
 	right: 80px;
 	overflow: hidden;
 }
@@ -47,7 +50,7 @@ ul.mob_menu > li {
 
 ul.mob_menu > li:first-child,
 ul.mob_menu > li:nth-child(2) {
-	top: 10px;
+	top: 12px;
 	width: 66%;
 }
 
@@ -70,36 +73,72 @@ ul.mob_menu > li:last-child {
 	width: 100%;
 }
 
-ul.language {
+ul.mob_menu.opened > li:first-child {
+	transform: rotate(45deg);
+}
+
+ul.mob_menu.opened > li:nth-child(2) {
+	transform: rotate(-45deg);
+}
+
+ul.mob_menu.opened > li:nth-child(3) {
+	top: -10px;
+}
+
+ul.mob_menu.opened > li:last-child {
+	bottom: -10px;
+}
+
+ul.mob_menu.opened > li {
+	width: 100%;
+}
+
+div.lang {
 	position: absolute;
-	top: 22px;
-	right: 20px;
-}
-
-ul.language > li {
+	top: 5px;
+	right: 15px;
 	width: 40px;
-	height: 25px;
+	height: 40px;
+	background-color: rgba(245, 245, 245, 1);
+	cursor: pointer;
 }
 
-ul.language > li:not(:first-child) {
+div.lang > span {
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	background: url("../img/rus.svg") no-repeat 50% 50%;
+	background-size: auto auto;
+}
+
+ul.lang_choice {
+	position: absolute;
 	display: none;
-	margin-top: 5px;
+	top: 60px;
+	right: 20px;
+	width: 70px;
+	height: 100px;
+	background-color: rgba(245, 245, 245, 1);
+	box-shadow: 2px 2px 3px 3px rgba(230, 230, 230, 1);
 }
 
-ul.language > li > a {
+ul.lang_choice > li {
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 10px auto 20px;
+}
+
+ul.lang_choice > li > a {
 	display: block;
 	width: 100%;
 	height: 100%;
 }
 
-li.rus > a {
-	background: url("../img/rus.svg") no-repeat 50% 50%;
-	background-size: cover;
-}
-
 li.eng > a {
 	background: url("../img/en.svg") no-repeat 50% 50%;
-	background-size: cover;
+	background-size: auto auto;
 }
 
 li.fr > a {
@@ -109,44 +148,28 @@ li.fr > a {
 
 @media (min-width: 1041px) {
 	a.logo {
-		width: 30%;
+		width: 25%;
 		background: url("../img/logo.jpg") no-repeat 50% 50%;
 		background-size: contain;
 	}
 
 	ul.mob_menu {
-		display: none;
+		/* display: none; */
 	}
 }
 
 @media (max-width: 1040px) {
 	a.logo {
 		background: url("../img/logo_mob.jpg") no-repeat 50% 50%;
-		background-size: 100%;
+		background-size: contain;
 	}
 
-		ul.mob_menu.opened > li:first-child {
-			transform: rotate(30deg);
-		}
-
-		ul.mob_menu.opened > li:nth-child(2) {
-			transform: rotate(-30deg);
-		}
-
-		ul.mob_menu.opened > li:nth-child(3) {
-			top: -10px;
-		}
-
-		ul.mob_menu.opened > li:last-child {
-			bottom: -10px;
-		}
 }
 
 @media (min-width: 1041px) and (max-width: 1400px) {
 	.header_wrap {
 		width: calc(100vw - 100px);
 	}
-
 }
 
 @media (min-width: 721px) and (max-width: 1040px) {
