@@ -164,11 +164,6 @@ li.fr > a {
 		background: url("../img/logo_mob.jpg") no-repeat 50% 50%;
 		background-size: contain;
 	}
-
-	ul.mob_menu {
-		/* right: 360px; */
-	}
-
 }
 
 @media (min-width: 1041px) and (max-width: 1400px) {

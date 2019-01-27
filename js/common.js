@@ -33,7 +33,6 @@ $(document).ready(function() {
 				$("div.container").css({"right" : "320px"});
 				$("header").css({"right" : "320px"});
 				}
-
 			}
 			}
 		});
