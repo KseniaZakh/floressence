@@ -4,8 +4,13 @@ nav {
 	position: fixed;
 }
 
-nav  ul {
+nav > ul {
 	width: 100%;
+}
+
+nav > ul > li {
+	font : normal 20px/30px "Light", Arial, sans-serif;
+	text-transform: uppercase;
 }
 
 nav a.menu_actual {
@@ -23,17 +28,64 @@ nav a:hover {
 		width: 560px;
 		z-index: 11;
 	}
-	nav ul > li {
+	nav > ul > li {
 		display: inline-block;
-		font : normal 20px/30px "Light", Arial, sans-serif;
-		text-transform: uppercase;
 		margin-right: 10px;
 	}
 }
 
 @media (max-width: 1040px) {
 	nav {
-		display: none;
+		height: 100vh;
+		box-shadow: -1px 0 10px rgba(0, 0, 0, 0.15);
+		z-index: 125;
+		background-color: rgba(230, 230, 230, 1);
+		transition: all .4s;
 	}
 
+	nav.mob {
+		top: 0;
+		right: 0;
+	}
+
+	nav.mob::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, .15);
+
+	}
+
+	nav.mob > ul {
+		padding: 30px 20px 20px 20px;
+	}
+
+	nav.mob > ul > li {
+		color: rgba(119, 119, 119, 1);
+		margin-bottom: 20px;
+	}
+}
+
+@media (min-width: 481px) and (max-width: 1040px) {
+	nav {
+		width: 320px;
+		right: -325px;
+	}
+
+	nav.mob::after {
+		right: 320px;
+	}
+}
+
+@media (max-width: 480px) {
+	nav {
+		width: 200px;
+		right: -205px;
+	}
+
+	nav.mob::after {
+		right: 200px;
+	}
 }

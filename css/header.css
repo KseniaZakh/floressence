@@ -6,10 +6,11 @@ header {
 	height: 70px;
 	background-color: rgba(255, 255, 255, 1);
 	top: 0;
-	left: 0;
 	z-index: 10;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	box-shadow: 1px 1px 1px 1px rgba(245, 245, 245, 1);
+	transition: all .4s cubic-bezier(0.5,0,0.3,1);
 }
 
 .header_wrap {
@@ -154,7 +155,7 @@ li.fr > a {
 	}
 
 	ul.mob_menu {
-		/* display: none; */
+		display: none;
 	}
 }
 
@@ -162,6 +163,10 @@ li.fr > a {
 	a.logo {
 		background: url("../img/logo_mob.jpg") no-repeat 50% 50%;
 		background-size: contain;
+	}
+
+	ul.mob_menu {
+		/* right: 360px; */
 	}
 
 }
