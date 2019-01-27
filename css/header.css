@@ -113,7 +113,7 @@ div.lang > span {
 	background-size: auto auto;
 }
 
-ul.lang_choice {
+header > ul.lang_choice {
 	position: absolute;
 	display: none;
 	top: 60px;
@@ -124,7 +124,7 @@ ul.lang_choice {
 	box-shadow: 2px 2px 3px 3px rgba(230, 230, 230, 1);
 }
 
-ul.lang_choice > li {
+header > ul.lang_choice > li {
 	display: block;
 	width: 30px;
 	height: 30px;
@@ -155,6 +155,10 @@ li.fr > a {
 	}
 
 	ul.mob_menu {
+		display: none;
+	}
+
+	li.lang_mob {
 		display: none;
 	}
 }

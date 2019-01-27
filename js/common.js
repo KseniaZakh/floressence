@@ -5,6 +5,8 @@ function resize() {
 		 $("ul.mob_menu").hasClass("opened")) {
 					$("nav").removeClass("mob");
 					$("ul.mob_menu").removeClass("opened");
+					$("div.container").css({"right" : "0"});
+					$("header").css({"right" : "0"});
 			}
 		}
 }
@@ -16,24 +18,24 @@ $(document).ready(function() {
 
 	$("ul.mob_menu").click(function() {
 		if ($("nav").length!=0) {
-		if ($(this).hasClass("opened")) {
-			$(this).removeClass("opened");
-			$("nav").removeClass("mob");
-			$("div.container").css({"right" : "0"});
-			$("header").css({"right" : "0"});
-			}
-		else {
-			$(this).addClass("opened");
-			$("nav").addClass("mob");
-			if (window.matchMedia("(max-width: 480px)").matches) {
-				$("div.container").css({"right" : "200px"});
-				$("header").css({"right" : "200px"});
+			if ($(this).hasClass("opened")) {
+				$(this).removeClass("opened");
+				$("nav").removeClass("mob");
+				$("div.container").css({"right" : "0"});
+				$("header").css({"right" : "0"});
 				}
 			else {
-				$("div.container").css({"right" : "320px"});
-				$("header").css({"right" : "320px"});
+				$(this).addClass("opened");
+				$("nav").addClass("mob");
+					if (window.matchMedia("(max-width: 480px)").matches) {
+						$("div.container").css({"right" : "200px"});
+						$("header").css({"right" : "200px"});
+						}
+					else {
+						$("div.container").css({"right" : "320px"});
+						$("header").css({"right" : "320px"});
+						}
 				}
-			}
 			}
 		});
 		$("nav").click(function() {

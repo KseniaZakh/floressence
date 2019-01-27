@@ -21,6 +21,22 @@ nav a:hover {
 	color: rgba(230, 46, 46, 1);
 }
 
+li.lang_mob {
+	height: 30px;
+}
+
+li.lang_mob > ul {
+	height: 100%;
+}
+
+li.lang_mob > ul > li {
+	display: inline-block;
+	width: 30px;
+	height: 100%;
+	margin-right: 20px;
+}
+
+
 @media (min-width: 1041px) {
 	nav {
 		top: 20px;
@@ -40,7 +56,6 @@ nav a:hover {
 		box-shadow: -1px 0 10px rgba(0, 0, 0, 0.15);
 		z-index: 125;
 		background-color: rgba(230, 230, 230, 1);
-		transition: all .4s;
 	}
 
 	nav.mob {
@@ -60,6 +75,7 @@ nav a:hover {
 
 	nav.mob > ul {
 		padding: 30px 20px 20px 20px;
+		transition: all .4s;
 	}
 
 	nav.mob > ul > li {
