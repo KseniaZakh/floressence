@@ -28,8 +28,8 @@ $(document).ready(function() {
 				$(this).addClass("opened");
 				$("nav").addClass("mob");
 					if (window.matchMedia("(max-width: 480px)").matches) {
-						$("div.container").css({"right" : "200px"});
-						$("header").css({"right" : "200px"});
+						$("div.container").css({"right" : "160px"});
+						$("header").css({"right" : "160px"});
 						}
 					else {
 						$("div.container").css({"right" : "320px"});
@@ -45,8 +45,6 @@ $(document).ready(function() {
 				$("div.container").css({"right" : "0"});
 				$("header").css({"right" : "0"});
 				}
-
-
 		});
 		return false;
 

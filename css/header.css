@@ -4,13 +4,13 @@ header {
 	position: fixed;
 	width: 100%;
 	height: 70px;
-	background-color: rgba(255, 255, 255, 1);
+	background-color: rgba(250, 250, 250, 1);
 	top: 0;
 	z-index: 10;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	box-shadow: 1px 1px 1px 1px rgba(245, 245, 245, 1);
-	transition: all .4s cubic-bezier(0.5,0,0.3,1);
+	transition: all .3s ease-out;
 }
 
 .header_wrap {
@@ -25,6 +25,8 @@ a.logo {
 	display: block;
 	position: relative;
 	height: 50px;
+	background: url("../img/logo.png") no-repeat 50% 50%;
+	background-size: contain;
 }
 
 ul.mob_menu {
@@ -32,7 +34,6 @@ ul.mob_menu {
 	width: 40px;
 	height: 30px;
 	top: 10px;
-	right: 80px;
 	overflow: hidden;
 }
 
@@ -75,11 +76,11 @@ ul.mob_menu > li:last-child {
 }
 
 ul.mob_menu.opened > li:first-child {
-	transform: rotate(45deg);
+	transform: rotate(43deg);
 }
 
 ul.mob_menu.opened > li:nth-child(2) {
-	transform: rotate(-45deg);
+	transform: rotate(-43deg);
 }
 
 ul.mob_menu.opened > li:nth-child(3) {
@@ -97,10 +98,8 @@ ul.mob_menu.opened > li {
 div.lang {
 	position: absolute;
 	top: 5px;
-	right: 15px;
 	width: 40px;
 	height: 40px;
-	background-color: rgba(245, 245, 245, 1);
 	cursor: pointer;
 }
 
@@ -113,18 +112,18 @@ div.lang > span {
 	background-size: auto auto;
 }
 
-header > ul.lang_choice {
+header ul.lang_choice {
 	position: absolute;
 	display: none;
-	top: 60px;
+	top: 70px;
 	right: 20px;
 	width: 70px;
 	height: 100px;
-	background-color: rgba(245, 245, 245, 1);
+	background-color: rgba(250, 250, 250, 1);
 	box-shadow: 2px 2px 3px 3px rgba(230, 230, 230, 1);
 }
 
-header > ul.lang_choice > li {
+header ul.lang_choice > li {
 	display: block;
 	width: 30px;
 	height: 30px;
@@ -149,9 +148,11 @@ li.fr > a {
 
 @media (min-width: 1041px) {
 	a.logo {
-		width: 25%;
-		background: url("../img/logo.jpg") no-repeat 50% 50%;
-		background-size: contain;
+		width: 22%;
+	}
+
+	div.lang {
+		right: 15px;
 	}
 
 	ul.mob_menu {
@@ -160,13 +161,6 @@ li.fr > a {
 
 	li.lang_mob {
 		display: none;
-	}
-}
-
-@media (max-width: 1040px) {
-	a.logo {
-		background: url("../img/logo_mob.jpg") no-repeat 50% 50%;
-		background-size: contain;
 	}
 }
 
@@ -180,19 +174,25 @@ li.fr > a {
 	.header_wrap {
 		width: calc(100vw - 80px);
 	}
-
-	a.logo {
-		width: 40%;
-	}
 }
 
 @media (min-width: 481px) and (max-width: 720px) {
 	.header_wrap {
 		width: calc(100vw - 60px);
 	}
+}
 
+@media (min-width: 481px) and (max-width: 1040px){
 	a.logo {
-		width: 60%;
+		width: 206px;
+	}
+
+	div.lang {
+		right: 15px;
+	}
+
+	ul.mob_menu {
+		right: 80px;
 	}
 }
 
@@ -203,5 +203,13 @@ li.fr > a {
 
 	a.logo {
 		width: 50%;
+	}
+
+	div.lang {
+		right: 10px;
+	}
+
+	ul.mob_menu {
+		right: 60px;
 	}
 }
