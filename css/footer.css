@@ -28,7 +28,7 @@ footer h3 {
 	margin-bottom: 15px;
 }
 
-ul.contacts {
+ul.contacts, p.contacts {
 	max-width: 90%;
 	margin-left: auto;
 	margin-right: auto;
@@ -112,7 +112,7 @@ div.telo {
 }
 
 @media (min-width: 481px) {
-	ul.contacts {
+	ul.contacts, p.contacts {
 		margin-left: 20px;
 		margin-right: 20px;
 		font : normal 21px/33px "Light", Arial, sans-serif;
@@ -124,7 +124,7 @@ div.telo {
 		padding: 10px 20px;
 	}
 
-	ul.contacts {
+	ul.contacts, p.contacts {
 		margin-left: 20px;
 		margin-right: 20px;
 		font : normal 18px/36px "Light", Arial, sans-serif;

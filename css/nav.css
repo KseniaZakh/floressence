@@ -21,7 +21,7 @@ nav a:hover {
 	color: rgba(230, 46, 46, 1);
 }
 
-li.lang_mob {
+/* li.lang_mob {
 	height: 30px;
 }
 
@@ -34,18 +34,19 @@ li.lang_mob > ul > li {
 	width: 30px;
 	height: 100%;
 	margin-right: 20px;
-}
+} */
 
 @media (min-width: 1041px) {
 	nav {
 		top: 20px;
-		left: calc(50% - 190px);
-		width: 600px;
+		left: calc(50% - 240px);
+		width: 560px;
 		z-index: 11;
 	}
-	nav > ul > li {
-		display: inline-block;
-		margin-right: 10px;
+
+	nav > ul {
+		display: flex;
+		justify-content: space-around;
 	}
 }
 
@@ -66,9 +67,9 @@ li.lang_mob > ul > li {
 	nav.mob::after {
 		content: "";
 		position: absolute;
-		top: 0;
+		top: 70px;
 		width: 100vw;
-		height: 100vh;
+		height: calc(100vh - 70px);
 		background-color: rgba(0, 0, 0, .15);
 
 	}

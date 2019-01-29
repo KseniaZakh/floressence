@@ -95,39 +95,18 @@ ul.mob_menu.opened > li {
 	width: 100%;
 }
 
-div.lang {
-	position: absolute;
-	top: 5px;
-	width: 40px;
-	height: 40px;
-	cursor: pointer;
-}
-
-div.lang > span {
-	display: block;
-	width: 30px;
-	height: 30px;
-	margin: 5px;
-	background: url("../img/rus.svg") no-repeat 50% 50%;
-	background-size: auto auto;
-}
-
 header ul.lang_choice {
 	position: absolute;
-	display: none;
-	top: 70px;
-	right: 20px;
-	width: 70px;
-	height: 100px;
-	background-color: rgba(250, 250, 250, 1);
-	box-shadow: 2px 2px 3px 3px rgba(230, 230, 230, 1);
+	display: flex;
+	justify-content: space-between;
+	top: 10px;
+	width: 75px;
+	height: 30px;
 }
 
 header ul.lang_choice > li {
-	display: block;
 	width: 30px;
-	height: 30px;
-	margin: 10px auto 20px;
+	height: 100%;
 }
 
 ul.lang_choice > li > a {
@@ -151,15 +130,7 @@ li.fr > a {
 		width: 22%;
 	}
 
-	div.lang {
-		right: 15px;
-	}
-
 	ul.mob_menu {
-		display: none;
-	}
-
-	li.lang_mob {
 		display: none;
 	}
 }
@@ -167,6 +138,18 @@ li.fr > a {
 @media (min-width: 1041px) and (max-width: 1400px) {
 	.header_wrap {
 		width: calc(100vw - 100px);
+	}
+}
+
+@media (min-width: 1041px) {
+	ul.lang_choice {
+		right: 0;
+	}
+}
+
+@media (max-width: 1040px) {
+	ul.mob_menu {
+		right: 0;
 	}
 }
 
@@ -187,12 +170,12 @@ li.fr > a {
 		width: 206px;
 	}
 
-	div.lang {
-		right: 15px;
+	ul.lang_choice {
+		right: 60px;
 	}
 
-	ul.mob_menu {
-		right: 80px;
+	div.container.opened,  header.opened {
+		right: 320px;
 	}
 }
 
@@ -200,16 +183,15 @@ li.fr > a {
 	.header_wrap {
 		width: calc(100vw - 40px);
 	}
-
 	a.logo {
 		width: 50%;
 	}
 
-	div.lang {
-		right: 10px;
+	ul.lang_choice {
+		right: 50px;
 	}
 
-	ul.mob_menu {
-		right: 60px;
+	div.container.opened, header.opened {
+		right: 160px;
 	}
 }
