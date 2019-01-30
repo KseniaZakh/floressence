@@ -116,7 +116,7 @@ li.eng > a, li.fr > a {
 }
 
 li.eng > a:hover, li.fr > a:hover {
-	transform: scale(1.1);
+	transform: scale(.8);
 }
 
 li.eng > a {

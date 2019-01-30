@@ -37,10 +37,6 @@ $(document).ready(function() {
 				}
 		});
 
-		$(".switch_parfum").click(function() {
-			$("#parfum").addClass("opened");
-		});
-
 		if ($("footer").length!=0) {
 				$("div.container").css({"padding-bottom" : ($("footer").outerHeight())});
 		}

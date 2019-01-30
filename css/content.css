@@ -44,64 +44,20 @@ div.prod_types > ul > li span {
 	background-color: rgba(255, 255, 255, .3);
 }
 
-div.prod_types > ul > li > a > span:hover {
+div.prod_types > ul > li > a:hover > span {
 	color: rgba(169, 0, 0, 1);
 	background-color: rgba(255, 255, 255, .7);
 	transition: all .25s;
+}
+
+div.prod_types > ul > li > a:hover {
+	transform: scale(.9);
 }
 
 div.prod_types > ul > li img {
 	display: block;
 	width: 100%;
 	height: auto;
-}
-
-.modal_prod_types {
-	display: none;
-	position:absolute;
-	padding: 20px 20px 30px 20px;
-	color: rgba(51, 51, 51, 1);
-	background-color: rgba(255, 255, 255, 1);
-	border-radius: 3px;
-	z-index: 20;
-}
-
-.modal_prod_types.opened {
-	display: block;
-}
-
-.modal_prod_types img {
-	display: block;
-	float: left;
-	height: auto;
-	margin-right: 20px;
-}
-
-.modal_prod_types::after {
-	content: "";
-	display: block;
-	clear: left;
-	width: 100%;
-}
-
-.modal_prod_types p {
-	margin-bottom: 20px;
-}
-
-.modal_prod_types ul > li {
-	position: relative;
-	padding-left: 15px;
-}
-
-.modal_prod_types ul > li::before {
-	content: "";
-	position: absolute;
-	width: 4px;
-	height: 4px;
-	top: 9px;
-	left: 5px;
-	background-color: rgba(51, 51, 51, 1);
-	border-radius: 50%;
 }
 
 @media (min-width: 1041px) and (max-width: 1400px) {
@@ -117,17 +73,6 @@ div.prod_types > ul > li img {
 
 	div.prod_types > ul > li:not(:last-child) {
 		margin-right: 20px;
-	}
-
-	.modal_prod_types {
-		width: calc(100% - 200px);
-		top: 10px;
-		left: 100px;
-		font : normal 18px/25px "Light", Arial, sans-serif;
-	}
-
-	.modal_prod_types img {
-		width: 40%;
 	}
 }
 
@@ -146,16 +91,6 @@ div.prod_types > ul > li img {
 		margin-right: 40px;
 	}
 
-	.modal_prod_types {
-		width: calc(100% - 60px);
-		top: 10px;
-		left: 30px;
-		font : normal 18px/25px "Light", Arial, sans-serif;
-	}
-
-	.modal_prod_types img {
-		width: 60%;
-	}
 }
 
 @media (min-width: 481px) and (max-width: 720px) {
@@ -171,21 +106,5 @@ div.prod_types > ul > li img {
 
 	div.prod_types > ul > li {
 		width: 100%;
-	}
-
-	.modal_prod_types {
-		width: calc(100% - 40px);
-		top: 10px;
-		left: 20px;
-		font : normal 16px/20px "Light", Arial, sans-serif;
-	}
-
-	.modal_prod_types img {
-		float: none;
-		width: 100%;
-	}
-
-	.modal_prod_types > div > div {
-		margin-top: 20px;
 	}
 }
