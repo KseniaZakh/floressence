@@ -22,6 +22,7 @@ div.prod_types > ul {
 div.prod_types > ul > li {
 	position: relative;
 	margin-bottom: 30px;
+	overflow: hidden;
 }
 
 div.prod_types > ul > li > a {
@@ -52,7 +53,7 @@ div.prod_types > ul > li > a:hover > span {
 }
 
 div.prod_types > ul > li > a:hover {
-	transform: scale(.9);
+	transform: scale(1.1);
 }
 
 div.prod_types > ul > li img {
