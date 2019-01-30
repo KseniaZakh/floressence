@@ -27,6 +27,7 @@ div.prod_types > ul > li {
 div.prod_types > ul > li > a {
 	display: block;
 	width: 100%;
+	transition: all 0.25s;
 }
 
 div.prod_types > ul > li span {
