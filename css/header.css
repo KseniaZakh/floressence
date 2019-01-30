@@ -97,22 +97,26 @@ ul.mob_menu.opened > li {
 
 header ul.lang_choice {
 	position: absolute;
-	display: flex;
-	justify-content: space-between;
 	top: 10px;
-	width: 75px;
+	justify-content: space-between;
+	width: 80px;
 	height: 30px;
 }
 
-header ul.lang_choice > li {
+li.eng, li.fr {
 	width: 30px;
 	height: 100%;
 }
 
-ul.lang_choice > li > a {
+li.eng > a, li.fr > a {
 	display: block;
 	width: 100%;
 	height: 100%;
+	transition: all 0.5s;
+}
+
+li.eng > a:hover, li.fr > a:hover {
+	transform: scale(1.1);
 }
 
 li.eng > a {
@@ -133,17 +137,16 @@ li.fr > a {
 	ul.mob_menu {
 		display: none;
 	}
+
+	ul.lang_choice {
+		display: flex;
+		right: 0;
+	}
 }
 
 @media (min-width: 1041px) and (max-width: 1400px) {
 	.header_wrap {
-		width: calc(100vw - 100px);
-	}
-}
-
-@media (min-width: 1041px) {
-	ul.lang_choice {
-		right: 0;
+		width: calc(100% - 100px);
 	}
 }
 
@@ -155,13 +158,13 @@ li.fr > a {
 
 @media (min-width: 721px) and (max-width: 1040px) {
 	.header_wrap {
-		width: calc(100vw - 80px);
+		width: calc(100% - 80px);
 	}
 }
 
 @media (min-width: 481px) and (max-width: 720px) {
 	.header_wrap {
-		width: calc(100vw - 60px);
+		width: calc(100% - 60px);
 	}
 }
 
@@ -171,7 +174,8 @@ li.fr > a {
 	}
 
 	ul.lang_choice {
-		right: 60px;
+		display: flex;
+		right: 100px;
 	}
 
 	div.container.opened,  header.opened {
@@ -181,17 +185,17 @@ li.fr > a {
 
 @media (max-width: 480px) {
 	.header_wrap {
-		width: calc(100vw - 40px);
+		width: calc(100% - 40px);
 	}
 	a.logo {
 		width: 50%;
 	}
 
 	ul.lang_choice {
-		right: 50px;
+		display: none;
 	}
 
 	div.container.opened, header.opened {
-		right: 160px;
+		right: 240px;
 	}
 }

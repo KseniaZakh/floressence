@@ -53,6 +53,7 @@ ul.contacts > li {
 	font : normal 20px/25px "Light", Arial, sans-serif;
 	text-align: center;
 }
+
 footer a {
 	display: inline-block;
 	color: rgba(214, 0, 0, 1);
@@ -62,6 +63,7 @@ footer a {
 footer a:hover {
 	color: rgba(169, 0, 0, 1)
 }
+
 div.telo {
 	position: relative;
 	width: 100%;
