@@ -13,7 +13,7 @@ nav > ul > li {
 	text-transform: uppercase;
 }
 
-nav a.selected {
+nav span.selected {
 	color: rgba(255, 10, 10, 1);
 }
 
@@ -46,7 +46,7 @@ nav a:hover {
 	nav.mob {
 		top: 0;
 		right: 0;
-		transition: all .3s ease-out;
+		transition: all .25s ease-out;
 	}
 
 	nav.mob::after {

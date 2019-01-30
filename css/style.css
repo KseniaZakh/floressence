@@ -10,7 +10,7 @@ div.container {
 	min-height: 100vh;
 	margin: 0 auto;
 	color: rgb(51, 51, 51);
-	transition: all .3s ease-out;
+	transition: all .25s ease-out;
 }
 
 a {

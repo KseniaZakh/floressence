@@ -36,10 +36,14 @@ $(document).ready(function() {
 				$("header").removeClass("opened");
 				}
 		});
+
+		$(".switch_parfum").click(function() {
+			$("#parfum").addClass("opened");
+		});
+
+		if ($("footer").length!=0) {
+				$("div.container").css({"padding-bottom" : ($("footer").outerHeight())});
+		}
+
 		return false;
-
-	if ($("div.container > footer").length!=0) {
-		$("div.container").css({"padding-bottom" : ($("div.container > footer").outerHeight())});
-	}
-
 })
