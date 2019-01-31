@@ -3,15 +3,36 @@
 div.content {
 	position: relative;
 	width: 100%;
-}
-
-div.prod_types {
-	width: 100%;
-	background-color: rgba(255, 255, 255, 1);
+	color: rgba(51, 51, 51, 1);
 	margin-top: 90px;
 }
 
-div.prod_types > ul {
+/* div.video {
+	position: relative;
+	width: 100%;
+	padding-top: 220px;
+	padding-bottom: 50px;
+}
+
+video {
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+} */
+
+div.prod_types,
+div.text  {
+	width: 100%;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+div.video_wrap,
+div.prod_types > ul,
+div.preview_wrap,
+div.text_container {
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 1170px;
@@ -19,9 +40,13 @@ div.prod_types > ul {
 	margin-right: auto;
 }
 
+div.text_container {
+	padding: 50px 20px 30px 20px;
+}
+
 div.prod_types > ul > li {
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 	overflow: hidden;
 }
 
@@ -44,6 +69,7 @@ div.prod_types > ul > li span {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	background-color: rgba(255, 255, 255, .3);
+	z-index: 10;
 }
 
 div.prod_types > ul > li > a:hover > span {
@@ -52,8 +78,9 @@ div.prod_types > ul > li > a:hover > span {
 	transition: all .25s;
 }
 
-div.prod_types > ul > li > a:hover {
+div.prod_types > ul > li > a:hover > img {
 	transform: scale(1.1);
+	transition: all .25s;
 }
 
 div.prod_types > ul > li img {
@@ -62,8 +89,55 @@ div.prod_types > ul > li img {
 	height: auto;
 }
 
+div.preview {
+	width: 100%;
+}
+
+div.preview.expertise {
+	padding-top: 100px;
+	padding-bottom: 50px;
+	background: url("../img/fleurs.jpg") no-repeat 50% 0;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+div.preview.production {
+	padding-top: 250px;
+	padding-bottom: 50px;
+	background: url("../img/drop.jpg") no-repeat 50% 0;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+div.preview_wrap > div {
+	padding: 50px;
+	background-color: rgba(255, 255, 255, .8);
+}
+
+div.content h2 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+div.content a {
+	color: rgba(214, 0, 0, 1);
+	transition : .25s ease;
+}
+
+div.content a:hover {
+	color: rgba(169, 0, 0, 1);
+}
+
+div.text p {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
 @media (min-width: 1041px) and (max-width: 1400px) {
-	div.prod_types > ul {
+	div.prod_types > ul,
+	div.preview_wrap,
+	div.text_container {
 		width: calc(100vw - 100px);
 	}
 }
@@ -76,11 +150,58 @@ div.prod_types > ul > li img {
 	div.prod_types > ul > li:not(:last-child) {
 		margin-right: 20px;
 	}
+
+	div.preview_wrap > div  {
+		width: calc((100% - 40px) / 2);
+	}
+
+	div.preview.expertise > div > div {
+		margin-right: auto;
+	}
+
+	div.preview.production > div > div {
+		margin-left: auto;
+	}
+
+	div.content h2 {
+		font : normal 27px/28px "Light", Arial, sans-serif;
+		text-align: center;
+	}
+
+	div.preview p {
+		font : normal 20px/25px "Light", Arial, sans-serif;
+		text-align: justify;
+	}
+
+	div.text p {
+		font : normal 26px/27px "Light", Arial, sans-serif;
+	}
 }
 
 @media (min-width: 721px) and (max-width: 1040px) {
-	div.prod_types > ul {
+	div.prod_types > ul,
+	div.preview_wrap,
+	div.text_container   {
 		width: calc(100% - 80px);
+	}
+
+	div.preview > div {
+		width: 680px;
+		align-self: center;
+	}
+
+	div.content h2 {
+		font : normal 27px/28px "Light", Arial, sans-serif;
+		text-align: center;
+	}
+
+	div.preview p {
+		font : normal 18px/25px "Light", Arial, sans-serif;
+		text-align: justify;
+	}
+
+	div.text p {
+		font : normal 26px/27px "Light", Arial, sans-serif;
 	}
 }
 
@@ -92,17 +213,45 @@ div.prod_types > ul > li img {
 	div.prod_types > ul > li:nth-child(odd) {
 		margin-right: 40px;
 	}
+}
 
+@media (max-width: 720px) {
+	div.preview_wrap > div {
+		width: calc(100% - 40px);
+		min-width: 280px;
+	}
+
+	div.preview_wrap {
+		justify-content: center;
+	}
+
+	div.content h2 {
+		font: normal 18px/18px "Light", Arial, sans-serif;
+		text-align: center;
+	}
+
+	div.preview p {
+		font: normal 16px/25px "Light", Arial, sans-serif;
+		text-align: justify;
+	}
+
+	div.text p {
+		font : normal 16px/27px "Light", Arial, sans-serif;
+	}
 }
 
 @media (min-width: 481px) and (max-width: 720px) {
-	div.prod_types > ul {
+	div.prod_types > ul,
+	div.preview_wrap,
+	div.text_container {
 		width: calc(100% - 60px);
 	}
 }
 
 @media (max-width: 480px) {
-	div.prod_types > ul {
+	div.prod_types > ul,
+	div.preview_wrap,
+	div.text_container {
 		width: calc(100% - 40px);
 	}
 

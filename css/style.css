@@ -6,8 +6,9 @@ body {
 
 div.container {
 	position: relative;
+	display: table !important;
 	width: 100%;
-	min-height: 100vh;
+	min-height: 100%;
 	margin: 0 auto;
 	color: rgb(51, 51, 51);
 	transition: all .25s ease-out;
