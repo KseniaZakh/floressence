@@ -59,6 +59,7 @@ div.video_cover > div {
 
 div.video_cover > div > p {
 	text-transform: uppercase;
+	text-align: left;
 }
 
 div.text_container {
@@ -168,7 +169,6 @@ div.text p {
 
 	div.video_cover > div > p {
 		font : normal 27px/34px "Light", Arial, sans-serif;
-		text-align: justify;
 	}
 
 	div.prod_types > ul > li {
@@ -255,7 +255,6 @@ div.text p {
 
 	div.video_cover > div > p {
 		font : normal 24px/34px "Light", Arial, sans-serif;
-		text-align: left;
 	}
 
 	div.prod_types > ul > li {
@@ -325,7 +324,6 @@ div.text p {
 
 	div.video_cover > div > p {
 		font : normal 20px/34px "Light", Arial, sans-serif;
-		text-align: left;
 	}
 
 	div.prod_types > ul > li {
