@@ -231,7 +231,7 @@ div.text p {
 	}
 
 	div.video_cover > div {
-		width: 40%;
+		width: 50vmax;
 		right: 0;
 		bottom: 40px;
 	}
@@ -314,7 +314,7 @@ div.text p {
 	}
 
 	div.video_cover > div {
-		width: 70%;
+		width: 83%;
 		right: 0;
 		bottom: 30px;
 	}
