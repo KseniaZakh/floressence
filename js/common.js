@@ -36,10 +36,6 @@ $(document).ready(function() {
 				$("header").removeClass("opened");
 				}
 		});
-		//
-		// if ($("footer").length!=0) {
-		// 		$("div.container").css({"padding-bottom" : ($("footer").outerHeight())});
-		// }
-
+	
 		return false;
 })
