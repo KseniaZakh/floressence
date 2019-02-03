@@ -299,6 +299,10 @@ div.text p {
 		margin-right: 40px;
 	}
 
+	div.preview_wrap > div {
+		padding: 20px;
+	}
+
 	div.preview p {
 		text-align: justify;
 	}
