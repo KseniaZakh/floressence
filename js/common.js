@@ -37,5 +37,12 @@ $(document).ready(function() {
 				}
 		});
 
+		$("div.container > div.content > div.video > span").on("click", function() {
+		setTimeout(function(){
+			$("div.container > div.content > div.video > video").get(0).play();
+			}, 1500);
+		});
+	$("div.container > div.content > div.video > span").click();
+
 		return false;
 })
