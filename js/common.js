@@ -45,4 +45,4 @@ $(document).ready(function() {
 	$("div.container > div.content > div.video > span").click();
 
 		return false;
-})
+});
