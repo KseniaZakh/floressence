@@ -40,7 +40,7 @@ $(document).ready(function() {
 		$("div.container > div.content > div.video > span").on("click", function() {
 		setTimeout(function(){
 			$("div.container > div.content > div.video > video").get(0).play();
-			}, 1500);
+		}, 300);
 		});
 	$("div.container > div.content > div.video > span").click();
 

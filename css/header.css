@@ -180,6 +180,7 @@ li.fr > a {
 
 	div.container.opened,  header.opened {
 		right: 320px;
+		transition: all .25s ease;
 	}
 }
 
@@ -197,5 +198,6 @@ li.fr > a {
 
 	div.container.opened, header.opened {
 		right: 240px;
+		transition: all .25s ease;
 	}
 }

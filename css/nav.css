@@ -17,6 +17,7 @@ nav > ul > li {
 nav span.selected {
 	color: rgba(255, 10, 10, 1);
 }
+
 nav a {
 	transition: all .25s ease;
 }
