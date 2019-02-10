@@ -117,7 +117,7 @@ div.preview.expertise {
 	padding-top: 100px;
 	padding-bottom: 50px;
 	background: url("../img/fleurs.jpg");
-	background-position: 50% 50%;
+	/* background-position: 50% 50%; */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -350,7 +350,7 @@ div.text p {
 	}
 
 	div.video_cover > div > p {
-		font : normal 20px/30px "Light", Arial, sans-serif;
+		font : normal 16px/25px "Light", Arial, sans-serif;
 	}
 
 	div.prod_types > ul > li span {
@@ -373,11 +373,11 @@ div.text p {
 	}
 
 	div.video_cover > div {
-		bottom: 20px;
+		bottom: 60px;
 	}
 
 	div.video_cover > div > p {
-		font : normal 16px/28px "Light", Arial, sans-serif;
+		font : normal 16px/25px "Light", Arial, sans-serif;
 	}
 
 	div.prod_types > ul > li {
