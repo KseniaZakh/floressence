@@ -116,12 +116,17 @@ div.preview {
 div.preview.expertise {
 	padding-top: 100px;
 	padding-bottom: 50px;
+	background-image: url("../img/fleurs_mob.jpg");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 div.preview.production {
 	padding-top: 250px;
 	padding-bottom: 50px;
-	background: url("../img/drop.jpg");
+	background-image: url("../img/drop.jpg");
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -359,16 +364,6 @@ div.text p {
 	}
 }
 
-@media (min-width: 481px) {
-	div.preview.expertise {
-		background: url("../img/fleurs.jpg");
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-attachment: fixed;
-	}
-}
-
 @media (max-width: 480px) {
 	div.video_cover,
 	div.prod_types > ul,
@@ -396,14 +391,6 @@ div.text p {
 
 	div.prod_types > ul > li:nth-child(odd) {
 		margin-right: 20px;
-	}
-
-	div.preview.expertise {
-		background: url("../img/fleurs_mob.jpg");
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-attachment: fixed;
 	}
 
 	div.prod_types > ul > li span {
