@@ -6,11 +6,16 @@ div.container > header {
 	height: 70px;
 	background-color: rgba(250, 250, 250, 1);
 	top: 0;
+	right: 0;
 	z-index: 11;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	box-shadow: 1px 1px 1px 1px rgba(245, 245, 245, 1);
 	transition: all .25s ease;
+}
+
+div.container.opened > header {
+	right: 240px;
 }
 
 div.container > header > .header_wrap {
