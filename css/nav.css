@@ -45,7 +45,6 @@ nav a:hover {
 		top: 0;
 		left: 100%;
 		box-shadow: -1px 0 10px rgba(0, 0, 0, 0.15);
-		padding-top: 90px;
 		padding-left: 20px;
 		background-color: rgba(250, 250, 250, 1);
 	}
@@ -80,12 +79,22 @@ nav a:hover {
 
 }
 
+@media (min-width: 481px) and (max-width: 1040px) {
+	div.container > nav {
+		padding-top: 50px;
+	}
+}
+
 @media (max-width: 480px) {
 		li.lang_mob > ul {
 		display: flex;
 		justify-content: space-between;
 		width: 80px;
 		height: 30px;
+	}
+
+	div.container > nav {
+		padding-top: 20px;
 	}
 
 }
