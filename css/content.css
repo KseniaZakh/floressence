@@ -120,7 +120,6 @@ div.preview.expertise {
 	background-position: 25% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-attachment: fixed;
 }
 
 div.preview.production {
@@ -130,7 +129,6 @@ div.preview.production {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-attachment: fixed;
 }
 
 div.preview_wrap > div {
@@ -361,6 +359,16 @@ div.text p {
 
 	div.preview_wrap > div {
 		padding: 30px;
+	}
+}
+
+@media (min-width: 481px) {
+	div.preview.expertise {
+		background-attachment: fixed;
+	}
+
+	div.preview.production {
+		background-attachment: fixed;
 	}
 }
 

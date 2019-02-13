@@ -151,12 +151,6 @@ li.fr > a {
 	}
 }
 
-@media (max-width: 1040px) {
-	ul.mob_menu {
-		right: 20px;
-	}
-}
-
 @media (min-width: 721px) and (max-width: 1040px) {
 	.header_wrap {
 		width: calc(100% - 80px);
@@ -178,6 +172,10 @@ li.fr > a {
 		display: flex;
 		right: 100px;
 	}
+
+	ul.mob_menu {
+		right: 20px;
+	}
 }
 
 @media (max-width: 480px) {
@@ -190,5 +188,9 @@ li.fr > a {
 
 	ul.lang_choice {
 		display: none;
+	}
+
+	ul.mob_menu {
+		right: 0;
 	}
 }
