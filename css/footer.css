@@ -70,7 +70,6 @@ footer a:hover {
 	padding-bottom: 350px;
 	background: url("../img/scentstrip.jpg") no-repeat 50% 0;
 	background-size: cover;
-	background-attachment: fixed;
 }
 
 @media (min-width: 1401px) {

@@ -362,16 +362,6 @@ div.text p {
 	}
 }
 
-@media (min-width: 481px) {
-	div.preview.expertise {
-		background-attachment: fixed;
-	}
-
-	div.preview.production {
-		background-attachment: fixed;
-	}
-}
-
 @media (max-width: 480px) {
 	div.video_cover,
 	div.prod_types > ul,
