@@ -7,12 +7,7 @@ function resize() {
 $(document).ready(function() {
 			$("header > div > ul").click(function() {
 				if ($("div.container > nav").length!=0) {
-					if ($("div.container").hasClass("opened")) {
-						$("div.container").removeClass("opened");
-						}
-					else {
-						$("div.container").addClass("opened");
-						}
+					$("div.container").toggleClass("opened");
 					}
 				});
 
