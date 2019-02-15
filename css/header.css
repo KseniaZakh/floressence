@@ -170,11 +170,11 @@ li.fr > a {
 
 	ul.lang_choice {
 		display: flex;
-		right: 100px;
+		right: 80px;
 	}
 
 	ul.mob_menu {
-		right: 20px;
+		right: 0;
 	}
 }
 

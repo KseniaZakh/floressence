@@ -23,10 +23,9 @@ $(document).ready(function() {
 				});
 			$("div.container > div.content > div.video > span").click();
 
-			if (!/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-				$("div.preview").css("background-attachment", "fixed");
-				$("div.down_level").css("background-attachment", "fixed");
-			}
+			if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		$("div.preview").css("background-attachment", "fixed");
+		}
 
 			return false;
 			});
