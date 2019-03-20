@@ -5,7 +5,7 @@ function resize() {
 		}
 
 $(document).ready(function() {
-			$("header > div > ul").click(function() {
+			$("ul.mob_menu").click(function() {
 				if ($("div.container > nav").length!=0) {
 					$("div.container").toggleClass("opened");
 					}
