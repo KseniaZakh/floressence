@@ -33,7 +33,7 @@ ul {
 
 @media (max-width: 1040px) {
 	div.container.opened {
-		left: -260px;
-		min-width: 100vw;
+		left: -240px;
+		min-width: calc(100vw - 20px);
 		}
 	}
