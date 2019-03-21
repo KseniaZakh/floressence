@@ -10,7 +10,7 @@ div.container > header {
 	z-index: 11;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	box-shadow: 1px 1px 1px 1px rgba(245, 245, 245, 1);
+	box-shadow: -1px 1px 1px 1px rgba(245, 245, 245, 1);
 	transition: all .25s ease;
 }
 
@@ -18,7 +18,7 @@ div.container.opened > header {
 	right: 240px;
 }
 
-div.container > header > .header_wrap {
+div.container > header > div {
 	position: relative;
 	max-width: 1170px;
 	margin: 0 auto;
@@ -146,19 +146,19 @@ li.fr > a {
 }
 
 @media (min-width: 1041px) and (max-width: 1400px) {
-	.header_wrap {
+	header > div {
 		width: calc(100% - 100px);
 	}
 }
 
 @media (min-width: 721px) and (max-width: 1040px) {
-	.header_wrap {
+	header > div {
 		width: calc(100% - 80px);
 	}
 }
 
 @media (min-width: 481px) and (max-width: 720px) {
-	.header_wrap {
+	header > div {
 		width: calc(100% - 60px);
 	}
 }
@@ -179,7 +179,7 @@ li.fr > a {
 }
 
 @media (max-width: 480px) {
-	.header_wrap {
+	header > div {
 		width: calc(100% - 40px);
 	}
 	a.logo {
@@ -187,9 +187,15 @@ li.fr > a {
 	}
 
 	ul.lang_choice {
-		display: none;
+		display: flex;
+		right: -120px;
+		z-index: 60;
 	}
 
+	li.eng, li.fr {
+		position: relative;
+		z-index: 100;
+	}
 	ul.mob_menu {
 		right: 0;
 	}
