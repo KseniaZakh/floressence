@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+div.content > div.err_page {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+div.content > div.err_page > h1 {
+	font: normal 120px/120px "Light", Arial, sans-serif;
+	color: rgba(255, 10, 10, 1);
+	padding-top: 20px;
+}
+
+div.content > div.err_page > h3 {
+	color: rgba(119, 119, 119, 1);
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+div.content > div.err_page > h1,
+div.content > div.err_page > h3,
+div.content > div.err_page > p {
+	text-align: center;
+}
+
+div.content > div.err_page > p,
+div.content > div.err_page > ul  {
+	font: normal 20px/28px "Light", Arial, sans-serif;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+div.content > div.err_page > ul > li {
+	max-width: 280px;
+	position: relative;
+	padding-left: 20px;
+	margin: 0 auto;
+}
+
+div.content > div.err_page > ul > li::before {
+	position: absolute;
+	content: "";
+	width: 8px;
+	height: 8px;
+	top: 10px;
+	left: 0;
+	background-color: rgba(255, 10, 10, 1);
+	border-radius: 50%;
+}
+
+@media (min-width: 1041px) {
+	div.content > div.err_page > h3 {
+		font: normal 40px/40px "Roboto Condensed", Arial, sans-serif;
+	}
+}
+
+@media (min-width: 721px) and (max-width: 1040px) {
+	div.content > div.err_page {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	div.content > div.err_page > h3 {
+		font: normal 36px/40px "Roboto Condensed", Arial, sans-serif;
+	}
+}
+
+@media (min-width: 481px) and (max-width: 720px) {
+	div.content > div.err_page {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	div.content > div.err_page > h3 {
+		font: normal 32px/36px "Roboto Condensed", Arial, sans-serif;
+	}
+}
+
+@media (max-width: 480px) {
+	div.content > div.err_page {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	div.content > div.err_page > h3 {
+		font: normal 28px/30px "Roboto Condensed", Arial, sans-serif;
+	}
+}
