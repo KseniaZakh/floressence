@@ -150,10 +150,9 @@ div.preview_wrap p > a:hover::after {
 	transform: translateX(5px);
 }
 
-
 div.content h2 {
-	margin-top: 20px;
-	margin-bottom: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	text-transform: uppercase;
 }
 
