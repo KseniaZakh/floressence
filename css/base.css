@@ -40,7 +40,6 @@ article > div.content p,
 article > div.content ul  {
 	margin-top: 20px;
 	margin-bottom: 20px;
-	text-align: justify;
 }
 
 article > div.content ul > li {

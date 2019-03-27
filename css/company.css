@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 div.content > div.records,
-div.content > div.text_photo,
-div.content > div.photo_text,
+/* div.content > div.text_photo, */
+/* div.content > div.photo_text, */
 div.content > div.evidence_wrap {
 	display: flex;
 	flex-wrap: wrap;
@@ -23,6 +23,14 @@ div.preview.company {
 div.photo_text{
 	margin-top: 40px;
 	margin-bottom: 40px;
+}
+
+div.clearfix::after {
+	content: "";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
 }
 
 div.text_photo > p,
@@ -132,22 +140,16 @@ div.photo_text > div:hover > div > a {
 		padding-bottom: 40px;
 	}
 
-	div.text_photo > p {
-		width: 25%;
-		margin-right: 20px;
-	}
-
 	div.text_photo > div {
-		width: calc(75% - 20px);
-	}
-
-	div.photo_text > p {
+		float: right;
+		width: 75%;
 		margin-left: 20px;
-		width: 35%;
-	}
+		}
 
 	div.photo_text > div {
-		width: calc(65% - 20px);
+		float: left;
+		margin-right: 20px;
+		width: 65%;
 	}
 
 	div.evidence_wrap > div {
@@ -160,22 +162,17 @@ div.photo_text > div:hover > div > a {
 }
 
 @media (min-width: 721px) and (max-width: 1040px) {
-	div.text_photo > p {
-		width: 25%;
-		margin-right: 20px;
-	}
 
 	div.text_photo > div {
-		width: calc(75% - 20px);
-	}
-
-	div.photo_text > p {
+		float: right;
+		width: 75%;
 		margin-left: 20px;
-		width: 35%;
-	}
+		}
 
 	div.photo_text > div {
-		width: calc(65% - 20px);
+		float: left;
+		margin-right: 20px;
+		width: 65%;
 	}
 
 	div.evidence_wrap > div {
