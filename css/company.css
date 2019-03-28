@@ -238,7 +238,7 @@ div.photo_text > div:first-child:hover > div > a {
 		order: 0;
 	}
 
-	div.text_photo > div:fist-child {
+	div.text_photo > div:first-child {
 		order: 1;
 	}
 }
