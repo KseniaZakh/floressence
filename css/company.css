@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 div.content > div.records,
-/* div.content > div.text_photo, */
-/* div.content > div.photo_text, */
+div.content > div.text_photo,
+div.content > div.photo_text,
 div.content > div.evidence_wrap {
 	display: flex;
 	flex-wrap: wrap;
@@ -25,14 +25,6 @@ div.photo_text{
 	margin-bottom: 40px;
 }
 
-div.clearfix::after {
-	content: "";
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
-}
-
 div.text_photo > p,
 div.photo_text > p {
 	margin-top: 0 !important;
@@ -44,7 +36,7 @@ div.photo_text > div {
 	position: relative;
 	cursor: pointer;
 	transition: all .25s ease;
-	margin-bottom: 20px;
+	/* margin-bottom: 20px; */
 }
 
 div.text_photo > div > img,
@@ -52,8 +44,8 @@ div.photo_text > div > img {
 	width: 100%;
 }
 
-div.text_photo > div::before,
-div.photo_text > div::before {
+div.text_photo > div:last-child::before,
+div.photo_text > div:first-child::before {
 	content: " ";
 	position: absolute;
 	top: 0;
@@ -65,13 +57,13 @@ div.photo_text > div::before {
 	transition: all .25s ease;
 }
 
-div.text_photo > div:hover::before,
-div.photo_text > div:hover::before{
+div.text_photo > div:last-child:hover::before,
+div.photo_text > div:first-child:hover::before{
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
-div.text_photo > div > div > a,
-div.photo_text > div > div > a {
+div.text_photo > div:last-child > div > a,
+div.photo_text > div:first-child > div > a {
 	display: block;
 	position: absolute;
 	width: 40px;
@@ -90,12 +82,12 @@ div.photo_text > div > div > a {
 	opacity: 0;
 }
 
-div.text_photo > div:hover > div > a,
-div.photo_text > div:hover > div > a {
+div.text_photo > div:last-child:hover > div > a,
+div.photo_text > div:first-child:hover > div > a {
 	opacity: 1;
 }
 
-.lightbox {
+/* .lightbox {
 	display: none;
 	position: fixed;
 	width: 100%;
@@ -109,9 +101,9 @@ div.photo_text > div:hover > div > a {
 .lightbox:target {
 	display: flex;
 	justify-content: center;
-}
+} */
 
-@media all and (orientation: portrait) {
+/* @media all and (orientation: portrait) {
 	.lightbox > img {
 		max-width: 90%;
 		height: auto;
@@ -125,7 +117,7 @@ div.photo_text > div:hover > div > a {
 		max-height: 85%;
 		margin: auto;
 	}
-}
+} */
 
 @media (min-width: 1041px) {
 	div.content > div.records {
@@ -140,16 +132,27 @@ div.photo_text > div:hover > div > a {
 		padding-bottom: 40px;
 	}
 
-	div.text_photo > div {
-		float: right;
-		width: 75%;
+	div.text_photo > div:last-child {
+		width: 70%;
 		margin-left: 20px;
 		}
 
-	div.photo_text > div {
-		float: left;
+	div.text_photo > div:first-child {
+		width: calc(30% - 20px);
+	}
+
+	div.photo_text > div:first-child {
 		margin-right: 20px;
-		width: 65%;
+		width: 70%;
+	}
+
+	div.photo_text > div:last-child {
+		width: calc(30% - 20px);
+	}
+
+	div.photo_text > div > p,
+	div.text_photo > div > p {
+		margin-top: 0 !important;
 	}
 
 	div.evidence_wrap > div {
@@ -163,16 +166,28 @@ div.photo_text > div:hover > div > a {
 
 @media (min-width: 721px) and (max-width: 1040px) {
 
-	div.text_photo > div {
-		float: right;
-		width: 75%;
+	div.text_photo > div:last-child {
+		width: 50%;
 		margin-left: 20px;
+		margin-bottom: 20px;
 		}
 
-	div.photo_text > div {
-		float: left;
+	div.text_photo > div:first-child {
+		width: calc(50% - 20px);
+	}
+
+	div.photo_text > div:first-child {
 		margin-right: 20px;
-		width: 65%;
+		width: 50%;
+	}
+
+	div.photo_text > div:last-child {
+		width: calc(50% - 20px);
+	}
+
+	div.photo_text > div > p,
+	div.text_photo > div > p {
+		margin-top: 0 !important;
 	}
 
 	div.evidence_wrap > div {
@@ -214,9 +229,7 @@ div.photo_text > div:hover > div > a {
 		padding-bottom: 40px;
 	}
 
-	div.photo_text > p,
 	div.photo_text > div,
-	div.text_photo > p,
 	div.text_photo > div {
 		width: 100%;
 	}
@@ -239,10 +252,8 @@ div.photo_text > div:hover > div > a {
 		padding-bottom: 40px;
 	}
 
-	div.photo_text > p,
 	div.photo_text > div,
-	div.text_photo > p,
-	div.text_photo > div {
+		div.text_photo > div {
 		width: 100%;
 	}
 }

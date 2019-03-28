@@ -8,6 +8,7 @@ $(document).ready(function() {
 
 	$(window).scroll(function() {
 		if($(window).scrollTop() > $(".records").scrollTop()) {
+			if(!$(".records").hasClass("selected")) {
 			$(".number").each(function () {
 				$(this).prop("Counter", 0).animate({
 					Counter: $(this).text()
@@ -19,7 +20,8 @@ $(document).ready(function() {
 					}
 			});
 		});
-		$(window).unbind("scroll");
+		$(".records").addClass("selected");
+			}
 		}
 	});
 
@@ -39,6 +41,6 @@ $(document).ready(function() {
 			if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		$("div.preview").css("background-attachment", "fixed");
 		}
-		
+
 	return false;
 			});
