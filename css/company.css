@@ -233,6 +233,14 @@ div.photo_text > div:first-child:hover > div > a {
 	div.text_photo > div {
 		width: 100%;
 	}
+
+	div.text_photo > div:last-child {
+		order: 0;
+	}
+
+	div.text_photo > div:fist-child {
+		order: 1;
+	}
 }
 
 @media (max-width: 480px) {
@@ -253,7 +261,15 @@ div.photo_text > div:first-child:hover > div > a {
 	}
 
 	div.photo_text > div,
-		div.text_photo > div {
+	div.text_photo > div {
 		width: 100%;
+	}
+
+	div.text_photo > div:last-child {
+		order: 0;
+	}
+
+	div.text_photo > div:first-child {
+		order: 1;
 	}
 }
