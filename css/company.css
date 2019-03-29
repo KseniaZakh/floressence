@@ -87,7 +87,7 @@ div.photo_text > div:first-child:hover > div > a {
 	opacity: 1;
 }
 
-/* .lightbox {
+.lightbox {
 	display: none;
 	position: fixed;
 	width: 100%;
@@ -101,9 +101,9 @@ div.photo_text > div:first-child:hover > div > a {
 .lightbox:target {
 	display: flex;
 	justify-content: center;
-} */
+}
 
-/* @media all and (orientation: portrait) {
+@media all and (orientation: portrait) {
 	.lightbox > img {
 		max-width: 90%;
 		height: auto;
@@ -117,7 +117,7 @@ div.photo_text > div:first-child:hover > div > a {
 		max-height: 85%;
 		margin: auto;
 	}
-} */
+}
 
 @media (min-width: 1041px) {
 	div.content > div.records {

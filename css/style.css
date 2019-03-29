@@ -35,6 +35,5 @@ ul {
 	div.container.opened {
 		left: -240px;
 		min-width: 100vw;
-		/* min-width: calc(100vw - 20px); */
 		}
 	}
