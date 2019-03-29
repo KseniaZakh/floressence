@@ -6,8 +6,6 @@ function resize() {
 
 $(document).ready(function() {
 
-	getComputedStyle(element, ":after");
-
 	$(window).scroll(function() {
 		if($(window).scrollTop() > $(".records").scrollTop()) {
 			if(!$(".records").hasClass("selected")) {
