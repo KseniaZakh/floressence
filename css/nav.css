@@ -71,12 +71,13 @@ nav a:hover {
 		margin-bottom: 20px;
 	}
 
-	div.container.opened::after {
-		content: "";
+	div.container.opened > span {
+		display: block;
 		position: absolute;
 		top: 70px;
 		width: 100vw;
 		height: calc(100% - 70px);
 		background-color: rgba(0, 0, 0, .15);
+		z-index: 4; 
 	}
 }

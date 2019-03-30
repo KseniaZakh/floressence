@@ -1,19 +1,20 @@
 @charset "UTF-8";
 
-article > div.content {
+article > div.content,
+article > div.brief {
 	max-width: 1170px;
 	margin: 0 auto;
 	color: rgba(51, 51, 51, 1);
 }
 
-article > div.content h1 {
+article h1 {
 	position: relative;
 	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
-article > div.content h1::after {
+article h1::after {
 	position: absolute;
 	content: "";
 	width: 80px;
@@ -23,7 +24,13 @@ article > div.content h1::after {
 	background-color: rgba(255, 10, 10, 1);
 }
 
-article > div.content h2 {
+article > div.brief > p {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+article h2 {
 	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -60,14 +67,16 @@ article > div.content ul > li::before {
 }
 
 @media (min-width: 1401px) {
-	article > div.content {
+	article > div.content,
+	article > div.brief  {
 		padding-top: 60px;
 		padding-bottom: 60px;
 	}
 }
 
 @media (min-width: 1041px) and (max-width: 1400px)  {
-	article > div.content {
+	article > div.content,
+	article > div.brief  {
 		width: calc(100% - 100px);
 		padding-top: 50px;
 		padding-bottom: 50px;
@@ -75,7 +84,7 @@ article > div.content ul > li::before {
 }
 
 @media (min-width: 1041px) {
-	article > div.content h2 {
+	article h2 {
 		font: normal 30px/34px "Roboto Condensed", Arial, sans-serif;
 	}
 
@@ -88,19 +97,24 @@ article > div.content ul > li::before {
 		font: normal 20px/25px "Light", Arial, sans-serif;
 	}
 
-	article > div.content h1 {
+	article h1 {
 		font: normal 45px/45px "Roboto Condensed", Arial, sans-serif;
+	}
+
+	article > div.brief > p {
+		font : normal 26px/27px "Light", Arial, sans-serif;
 	}
 }
 
 @media (min-width: 721px) and (max-width: 1040px) {
-	article > div.content {
+	article > div.content,
+	article > div.brief  {
 		width: calc(100% - 80px);
 		padding-top: 40px;
 		padding-bottom: 40px;
 	}
 
-	article > div.content h2 {
+	article  h2 {
 		font: normal 30px/34px "Roboto Condensed", Arial, sans-serif;
 	}
 
@@ -113,23 +127,28 @@ article > div.content ul > li::before {
 		font: normal 18px/25px "Light", Arial, sans-serif;
 	}
 
-	article > div.content h1 {
+	article h1 {
 		font: normal 40px/45px "Roboto Condensed", Arial, sans-serif;
+	}
+
+	article > div.brief > p {
+		font : normal 26px/27px "Light", Arial, sans-serif;
 	}
 }
 
 @media (min-width: 481px) and (max-width: 720px) {
-	article > div.content {
+	article > div.content,
+	article > div.brief  {
 		width: calc(100% - 60px);
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
 
-	article > div.content h1 {
+	article h1 {
 		font: normal 36px/40px "Roboto Condensed", Arial, sans-serif;
 	}
 
-	article > div.content h2 {
+	article h2 {
 		font: normal 26px/28px "Roboto Condensed", Arial, sans-serif;
 	}
 
@@ -142,20 +161,24 @@ article > div.content ul > li::before {
 		font: normal 18px/25px "Light", Arial, sans-serif;
 	}
 
+	article > div.brief > p {
+		font : normal 22px/27px "Light", Arial, sans-serif;
+	}
 }
 
 @media (max-width: 480px) {
-	article > div.content {
+	article > div.content,
+	article > div.brief  {
 		width: calc(100% - 40px);
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
 
-	article > div.content h1 {
+	article h1 {
 		font: normal 32px/36px "Roboto Condensed", Arial, sans-serif;
 	}
 
-	article > div.content h2 {
+	article h2 {
 		font: normal 24px/28px "Roboto Condensed", Arial, sans-serif;
 	}
 
@@ -166,5 +189,9 @@ article > div.content ul > li::before {
 	article > div.content p,
 	article > div.content ul  {
 		font: normal 18px/25px "Light", Arial, sans-serif;
+	}
+
+	article > div.brief > p {
+		font : normal 22px/27px "Light", Arial, sans-serif;
 	}
 }

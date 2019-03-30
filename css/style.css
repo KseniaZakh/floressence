@@ -15,6 +15,10 @@ div.container {
 	transition: all .25s ease;
 }
 
+div.container > span {
+	display: none;
+}
+
 a {
 	display: block;
 	text-decoration: none;
