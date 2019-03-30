@@ -69,8 +69,11 @@ article > div.content ul > li::before {
 @media (min-width: 1401px) {
 	article > div.content,
 	article > div.brief  {
-		padding-top: 60px;
-		padding-bottom: 60px;
+		padding-top: 40px;
+	}
+
+	article > div.content {
+		padding-bottom: 40px;
 	}
 }
 
@@ -78,8 +81,11 @@ article > div.content ul > li::before {
 	article > div.content,
 	article > div.brief  {
 		width: calc(100% - 100px);
-		padding-top: 50px;
-		padding-bottom: 50px;
+		padding-top: 30px;
+	}
+
+	article > div.content {
+		padding-bottom: 30px;
 	}
 }
 
@@ -110,8 +116,11 @@ article > div.content ul > li::before {
 	article > div.content,
 	article > div.brief  {
 		width: calc(100% - 80px);
-		padding-top: 40px;
-		padding-bottom: 40px;
+		padding-top: 20px;
+	}
+
+	article > div.content {
+		padding-bottom: 20px;
 	}
 
 	article  h2 {
@@ -140,8 +149,11 @@ article > div.content ul > li::before {
 	article > div.content,
 	article > div.brief  {
 		width: calc(100% - 60px);
-		padding-top: 30px;
-		padding-bottom: 30px;
+		padding-top: 10px;
+	}
+
+	article > div.content {
+		padding-bottom: 10px;
 	}
 
 	article h1 {
@@ -170,8 +182,11 @@ article > div.content ul > li::before {
 	article > div.content,
 	article > div.brief  {
 		width: calc(100% - 40px);
-		padding-top: 20px;
-		padding-bottom: 20px;
+		padding-top: 10px;
+	}
+
+	article > div.content {
+		padding-bottom: 10px;
 	}
 
 	article h1 {
