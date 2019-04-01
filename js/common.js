@@ -2,7 +2,13 @@ function resize() {
 	if ($("nav").length!=0 && $("div.container").hasClass("opened")) {
 				$("div.container").removeClass("opened");
 			}
+	var widthR = $(window).width();
+	var cont = $(".content").width();
+	var leftCoord = (widthR - cont) / 2;
+	$(".preview.company > span").css({"width" : widthR, "left" :-leftCoord + "px"});
+
 		}
+
 
 $(document).ready(function() {
 
@@ -41,6 +47,20 @@ $(document).ready(function() {
 			if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		$("div.preview").css("background-attachment", "fixed");
 		}
+
+		$("div.lb.action").on("click", function(e) {
+			var element = document.createElement("div");
+			element.setAttribute("class", "lbox");
+			element.innerHTML = $(this).html();
+		    $("div.container").append(element);
+	        e.preventDefault();
+			});
+
+
+			$("div.container").on("click", "div.lbox", function(e) {
+			$(this).remove();
+			e.preventDefault();
+			});
 
 	return false;
 			});

@@ -13,16 +13,19 @@ div.content > div.records > div {
 }
 
 div.preview.company {
-	width: 100%;
-	padding-top: 250px;
-	padding-bottom: 50px;
-	background-image: url("../img/company_background.jpg");
-	background-position: 25% 50%;
+	position: relative;
+	/* padding-top: 250px;
+	padding-bottom: 50px; */
+	height: 300px;
 }
 
-div.photo_text{
-	margin-top: 40px;
-	margin-bottom: 40px;
+div.preview.company > span {
+	display: block;
+	position: absolute;
+	height: 100%;
+	background-image: url("../img/company_background.jpg");
+	background-position: 50% 50%;
+	background-size: cover;
 }
 
 div.text_photo > p,
@@ -30,21 +33,22 @@ div.photo_text > p {
 	margin-top: 0 !important;
 }
 
-div.text_photo > div,
-div.photo_text > div {
+div.text_photo > div > div,
+div.photo_text > div > div {
 	display: block;
+	width: 100%;
 	position: relative;
 	cursor: pointer;
 	transition: all .25s ease;
 }
 
-div.text_photo > div > img,
-div.photo_text > div > img {
+div.text_photo > div.lb.action > div > img,
+div.photo_text > div.lb.action > div > img {
 	width: 100%;
 }
 
-div.text_photo > div:last-child::before,
-div.photo_text > div:first-child::before {
+div.text_photo > div:last-child > div::before,
+div.photo_text > div:first-child > div::before {
 	content: " ";
 	position: absolute;
 	top: 0;
@@ -56,12 +60,12 @@ div.photo_text > div:first-child::before {
 	transition: all .25s ease;
 }
 
-div.text_photo > div:last-child:hover::before,
-div.photo_text > div:first-child:hover::before{
+div.text_photo > div:last-child > div:hover::before,
+div.photo_text > div:first-child > div:hover::before{
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
-div.container > article div.lb::after {
+div.container > article div.lb > div::after {
 	display : block;
 	position : absolute;
 	top : calc(50% - 20px);
@@ -80,68 +84,79 @@ div.container > article div.lb::after {
 	opacity : 0;
 	}
 
-div.container > article div.lb:hover::after {
+div.container > article div.lb > div:hover::after {
 	opacity : 1;
 	}
 
 div.container > div.lbox {
-	display : flex;
-	justify-content : center;
 	position : fixed;
 	top : 0;
 	left : 0;
 	z-index : 20;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.8);
-	cursor : pointer;
 	}
 
-	@media all and (orientation: portrait) {
-	.lbox > img {
+	div.container > div.lbox > div {
+		display : flex;
+		justify-content : center;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		cursor : pointer;
+		z-index : 21;
+	}
+
+@media all and (orientation: portrait) {
+	.lbox > div > img {
 		max-width: 90%;
-		height: auto;
 		margin: auto;
 	}
+
 }
 
 @media all and (orientation: landscape) {
-	.lbox > img {
-		width: auto;
+	.lbox > div > img {
 		max-height: 85%;
 		margin: auto;
 	}
+
 }
 
 @media (min-width: 1041px) {
 	div.content > div.records {
-		padding-top: 100px;
-		padding-bottom: 80px;
+		padding-top: 40px;
+		padding-bottom: 20px;
 	}
 
 	div.content > div.records > div {
 		width: 50%;
 		font : normal 40px/40px "Light", Arial, sans-serif;
-		text-align: center;
 		padding-bottom: 40px;
 	}
 
+	div.text_photo,
+	div.photo_text {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
 	div.text_photo > div:last-child {
-		width: 70%;
+		width: 50%;
 		margin-left: 20px;
 		}
 
 	div.text_photo > div:first-child {
-		width: calc(30% - 20px);
+		width: calc(50% - 20px);
 	}
 
 	div.photo_text > div:first-child {
 		margin-right: 20px;
-		width: 70%;
+		width: 50%;
 	}
 
 	div.photo_text > div:last-child {
-		width: calc(30% - 20px);
+		width: calc(50% - 20px);
 	}
 
 	div.photo_text > div > p,
@@ -159,6 +174,12 @@ div.container > div.lbox {
 }
 
 @media (min-width: 721px) and (max-width: 1040px) {
+
+	div.text_photo,
+	div.photo_text {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 
 	div.text_photo > div:last-child {
 		width: 50%;
@@ -193,15 +214,14 @@ div.container > div.lbox {
 	}
 
 	div.content > div.records {
-		padding-top: 60px;
-		padding-bottom: 40px;
+		padding-top: 20px;
+		padding-bottom: 20px;
 	}
 
 	div.content > div.records > div {
 		width: 50%;
 		font : normal 32px/32px "Light", Arial, sans-serif;
-		text-align: center;
-		padding-bottom: 40px;
+		padding-bottom: 30px;
 
 	}
 }
@@ -212,20 +232,24 @@ div.container > div.lbox {
 	}
 
 	div.content > div.records {
-		padding-top: 40px;
+		padding-top: 20px;
 		padding-bottom: 20px;
 	}
 
 	div.content > div.records > div {
 		width: 100%;
 		font : normal 28px/28px "Light", Arial, sans-serif;
-		text-align: center;
-		padding-bottom: 40px;
+		padding-bottom: 20px;
 	}
 
 	div.photo_text > div,
 	div.text_photo > div {
 		width: 100%;
+	}
+
+	div.photo_text > div > p,
+	div.text_photo > div > p {
+		margin-bottom: 0 !important;
 	}
 
 	div.text_photo > div:last-child {
@@ -243,20 +267,24 @@ div.container > div.lbox {
 	}
 
 	div.content > div.records {
-		padding-top: 40px;
+		padding-top: 20px;
 		padding-bottom: 20px;
 	}
 
 	div.content > div.records > div {
 		width: 100%;
 		font : normal 24px/24px "Light", Arial, sans-serif;
-		text-align: center;
-		padding-bottom: 40px;
+		padding-bottom: 20px;
 	}
 
 	div.photo_text > div,
 	div.text_photo > div {
 		width: 100%;
+	}
+
+	div.photo_text > div > p,
+	div.text_photo > div > p {
+		margin-bottom: 0 !important;
 	}
 
 	div.text_photo > div:last-child {
