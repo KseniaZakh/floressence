@@ -15,12 +15,15 @@ div.content > div.records > div {
 div.preview.company {
 	position: relative;
 	height: 300px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	box-sizing: content-box;
 }
 
 div.preview.company > span {
 	display: block;
 	position: absolute;
-	height: 100%;
+	height: 300px;
 	background-image: url("../img/company_background.jpg");
 	background-position: 50% 50%;
 	background-size: cover;

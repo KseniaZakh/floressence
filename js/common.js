@@ -57,7 +57,6 @@ $(document).ready(function() {
 	        e.preventDefault();
 			});
 
-
 			$("div.container").on("click", "div.lbox", function(e) {
 			$(this).remove();
 			e.preventDefault();
