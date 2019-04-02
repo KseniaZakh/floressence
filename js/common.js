@@ -2,12 +2,15 @@ function resize() {
 	if ($("nav").length!=0 && $("div.container").hasClass("opened")) {
 				$("div.container").removeClass("opened");
 			}
-	var widthR = $(window).width();
-	var cont = $(".content").width();
-	var leftCoord = (widthR - cont) / 2;
-	$(".preview.company").css({"width" : widthR + "px", "left" :-leftCoord + "px"});
 
+	if ($(".preview.company").length !=0) {
+		var widthR = $(window).width();
+		var cont = $(".content").width();
+		var leftCoord = (widthR - cont) / 2;
+		$(".preview.company").css({"width" : widthR + "px", "left" :-leftCoord + "px"});
 		}
+
+	}
 
 
 $(document).ready(function() {
