@@ -5,7 +5,7 @@ function resize() {
 	var widthR = $(window).width();
 	var cont = $(".content").width();
 	var leftCoord = (widthR - cont) / 2;
-	$(".preview.company > span").css({"width" : widthR, "left" :-leftCoord + "px"});
+	$(".preview.company > span").css({"width" : widthR + "px", "left" :-leftCoord + "px"});
 
 		}
 
@@ -46,6 +46,7 @@ $(document).ready(function() {
 
 			if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		$("div.preview").css("background-attachment", "fixed");
+		$("div.preview > span").css("background-attachment", "fixed");
 		}
 
 		$("div.lb.action").on("click", function(e) {
