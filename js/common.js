@@ -10,7 +10,37 @@ function resize() {
 		$(".preview.company").css({"width" : widthR + "px", "left" :-leftCoord + "px"});
 		}
 
+	if ($(".preview.experts").length !=0) {
+
+		var maxHeight = -1;
+		$("ul.experts > li > div").each(function() {
+			maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
+		});
+
+		$("ul.experts > li > div").each(function() {
+			$(this).height(maxHeight);
+		});
+
+		$("ul.experts > li").css({"height" : maxHeight + "px"});
+
+		if(window.matchMedia("(min-width: 1041px)").matches) {
+			$(".preview.experts").css({"height" : (maxHeight + 80) + "px"});
+			}
+		if((window.matchMedia("(max-width: 1040px)").matches)
+		&&  (window.matchMedia("(min-width:721px)").matches)){
+			$(".preview.experts").css({"height" : ((maxHeight * 3)+160) + "px"});
+		}
+
+		if((window.matchMedia("(max-width: 720px)").matches)
+		&&  (window.matchMedia("(min-width:481px)").matches)){
+			$(".preview.experts").css({"height" : ((maxHeight * 3)+140) + "px"});
+		}
+
+		if(window.matchMedia("(max-width: 480px)").matches) {
+			$(".preview.experts").css({"height" : (maxHeight + 120) + "px"});
+			}
 	}
+}
 
 
 $(document).ready(function() {

@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+article {
+	padding-top: 20px;
+}
+
+div.brief > p > span {
+	text-transform: uppercase;
+}
+
+article ul.experts {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1170px;
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+div.preview.experts {
+	background-image: url("../img/expertise_background.jpg");
+	background-position: 50% 50%;
+	background-repeat: repeat-x;
+}
+
+article ul.experts > li {
+	position: relative;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+article ul.experts > li > div {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+article ul.experts > li > div.reverse > div {
+	display: flex;
+	background-color: rgba(136, 136, 136, 1);
+}
+
+article ul.experts > li > div.averse > img,
+article ul.experts > li > div.reverse > div,
+article ul.experts > li > div.reverse > p  {
+	width: 100%;
+}
+
+article ul.experts > li > div.averse > img {
+	display: block;
+	height: auto;
+}
+
+article ul.experts > li > div.reverse > div > div {
+	width: 40%;
+}
+
+article ul.experts > li > div.reverse > div > div > img {
+	width: 100%;
+}
+
+article ul.experts > li > div.reverse > div > span {
+	width: 60%;
+}
+
+article ul.experts > li > div.reverse > p {
+	padding: 20px 15px;
+}
+
+article ul.experts > li > div.averse {
+	opacity: 1;
+	transform: rotateY(0);
+	transition: transform 1s ease;
+}
+
+article ul.experts > li > div.reverse {
+	opacity: 0;
+	transform: rotateY(90deg);
+	transition: transform 1s ease;
+}
+
+article ul.experts > li:hover > div.averse {
+	opacity: 0;
+	transform: rotateY(90deg);
+}
+
+article ul.experts > li:hover > div.reverse {
+	opacity: 1;
+	transform: rotateY(0);
+}
+
+ul.experts p {
+	text-align: left;
+}
+
+ul.experts span {
+	display: block;
+	position: relative;
+	padding: 30px 15px 60px;
+	font: normal 20px/20px "Roboto Condensed", Arial, sans-serif;
+}
+
+ul.experts  div.averse span {
+	text-align: center;
+	color: rgba(0, 0, 0, 1);
+}
+
+ul.experts  div.reverse span {
+	color: rgba(255, 255, 255, 1);
+}
+
+ul.experts  li span::after {
+	content: "/ Парфюмер /";
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 30px;
+	top: 70px;
+	font : normal 16px/30px "Light", Arial, sans-serif;
+}
+
+ul.experts  div.reverse span::after {
+	color: rgba(255, 255, 255, 1);
+}
+
+ul.experts  div.averse span::after {
+	left: -5px;
+	text-align: center;
+}
+
+@media (min-width: 1041px) and (max-width: 1400px) {
+	article ul.experts {
+		width: calc(100% - 100px);
+	}
+}
+
+@media (min-width: 1041px) {
+	article ul.experts > li {
+		width: calc((100% - 40px) / 3);
+	}
+
+	article ul.experts > li:not(:last-child) {
+		margin-right: 20px;
+	}
+}
+
+@media (max-width: 1040px) {
+	article ul.experts > li {
+		width: 100%;
+	}
+
+	article ul.experts > li > div.reverse {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+@media (min-width: 721px) and (max-width: 1040px) {
+	article ul.experts {
+		width: calc(100% - 80px);
+	}
+
+	article ul.experts > li {
+		margin-bottom: 40px;
+	}
+}
+
+@media (min-width: 481px) and (max-width: 720px) {
+	article ul.experts {
+		width: calc(100% - 60px);
+	}
+
+	article ul.experts > li {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 480px)  {
+	article ul.experts {
+		width: calc(100% - 40px);
+	}
+
+	article ul.experts > li {
+		margin-bottom: 20px;
+	}
+}
