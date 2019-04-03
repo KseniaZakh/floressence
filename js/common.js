@@ -37,7 +37,7 @@ function resize() {
 		}
 
 		if(window.matchMedia("(max-width: 480px)").matches) {
-			$(".preview.experts").css({"height" : (maxHeight + 120) + "px"});
+			$(".preview.experts").css({"height" : ((maxHeight * 3) + 120) + "px"});
 			}
 	}
 }
