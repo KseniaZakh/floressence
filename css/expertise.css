@@ -14,7 +14,8 @@ article ul.experts {
 	max-width: 1170px;
 	margin: 0 auto;
 	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-bottom: 20px;
+
 }
 
 div.preview.experts {
@@ -25,68 +26,72 @@ div.preview.experts {
 
 article ul.experts > li {
 	position: relative;
-	background-color: rgba(255, 255, 255, 1);
+	perspective: 1000px;
+}
+
+article ul.experts > li:hover > div {
+	transform: rotateY(180deg);
 }
 
 article ul.experts > li > div {
-	position: absolute;
-	width: 100%;
-	top: 0;
-	left: 0;
+	transition : 0.6s;
+	transform-style : preserve-3d;
+	position : relative;
 }
 
-article ul.experts > li > div.reverse > div {
+article ul.experts > li > div,
+ article ul.experts > li > div > div {
+	width: 100%;
+}
+
+article ul.experts > li > div > div.reverse,
+article ul.experts > li > div > div.averse {
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+article ul.experts > li > div > div.averse  {
+	z-index: 3;
+	transform : rotateY(0deg);
+}
+
+article ul.experts > li > div > div.reverse {
+	transform: rotateY(180deg);
+}
+
+article ul.experts > li > div > div.reverse > div {
 	display: flex;
 	background-color: rgba(136, 136, 136, 1);
 }
 
-article ul.experts > li > div.averse > img,
-article ul.experts > li > div.reverse > div,
-article ul.experts > li > div.reverse > p  {
+article ul.experts > li > div > div.averse > img,
+article ul.experts > li > div > div.reverse > div,
+article ul.experts > li > div > div.reverse > p  {
 	width: 100%;
 }
 
-article ul.experts > li > div.averse > img {
+article ul.experts > li > div > div.averse > img {
 	display: block;
 	height: auto;
 }
 
-article ul.experts > li > div.reverse > div > div {
+article ul.experts > li > div > div.reverse > div > div {
 	width: 40%;
 }
 
-article ul.experts > li > div.reverse > div > div > img {
+article ul.experts > li > div > div.reverse > div > div > img {
 	width: 100%;
 }
 
-article ul.experts > li > div.reverse > div > span {
+article ul.experts > li > div > div.reverse > div > span {
 	width: 60%;
 }
 
-article ul.experts > li > div.reverse > p {
+article ul.experts > li > div > div.reverse > p {
 	padding: 20px 15px;
-}
-
-article ul.experts > li > div.averse {
-	opacity: 1;
-	transform: rotateY(0);
-	transition: transform 1s ease;
-}
-
-article ul.experts > li > div.reverse {
-	opacity: 0;
-	transform: rotateY(90deg);
-	transition: transform 1s ease;
-}
-
-article ul.experts > li:hover > div.averse {
-	opacity: 0;
-	transform: rotateY(90deg);
-}
-
-article ul.experts > li:hover > div.reverse {
-	opacity: 1;
-	transform: rotateY(0);
 }
 
 ul.experts p {
@@ -142,6 +147,20 @@ ul.experts  div.averse span::after {
 	article ul.experts > li:not(:last-child) {
 		margin-right: 20px;
 	}
+
+	article ul.experts > li > div {
+		padding-top: calc(160% + 80px);
+	}
+
+	article ul.experts > li > div > div.reverse > p {
+		font : normal 18px/20px "Light", Arial, sans-serif;
+	}
+}
+
+@media (min-width: 1041px) and (max-width: 1171px) {
+	article ul.experts > li > div > div.reverse > div {
+		display: none;
+	}
 }
 
 @media (max-width: 1040px) {
@@ -149,13 +168,8 @@ ul.experts  div.averse span::after {
 		width: 100%;
 	}
 
-	article ul.experts > li > div.reverse {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		align-items: flex-start;
-		height: 100%;
-		width: 100%;
+	article ul.experts > li > div {
+		padding-top: calc(160% + 80px);
 	}
 }
 
@@ -165,7 +179,20 @@ ul.experts  div.averse span::after {
 	}
 
 	article ul.experts > li {
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	article ul.experts > li > div {
+		padding-top: calc(160% + 80px);
+	}
+
+	article ul.experts > li > div > div.averse {
 		margin-bottom: 40px;
+	}
+
+	article ul.experts > li > div > div.reverse > p {
+		font : normal 18px/20px "Light", Arial, sans-serif;
 	}
 }
 
@@ -175,7 +202,16 @@ ul.experts  div.averse span::after {
 	}
 
 	article ul.experts > li {
+		width: 100%;
 		margin-bottom: 30px;
+	}
+
+	article ul.experts > li > div {
+		padding-top: calc(155% + 80px);
+	}
+
+	article ul.experts > li > div > div.reverse > p {
+		font : normal 18px/18px "Light", Arial, sans-serif;
 	}
 }
 
@@ -185,6 +221,36 @@ ul.experts  div.averse span::after {
 	}
 
 	article ul.experts > li {
+		width: 100%;
 		margin-bottom: 20px;
 	}
+
+	article ul.experts > li > div {
+		padding-top: 180%;
+	}
+
+	article ul.experts > li > div > div.reverse > p {
+		font : normal 17px/18px "Light", Arial, sans-serif;
+	}
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+	div.reverse,
+	div.averse {
+		height: calc(100vh - 70px);
+		overflow: hidden;
+	}
+
+	div.averse > span {
+		position: absolute;
+		bottom: 0;
+		z-index: 2;
+		background-color: rgba(255, 255, 255, 1);
+		width: 100%;
+	}
+
+	article ul.experts > li > div > div.reverse > div {
+		display: none;
+	}
+
 }

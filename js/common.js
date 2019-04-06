@@ -9,7 +9,6 @@ function resize() {
 		var leftCoord = (widthR - cont) / 2;
 		$(".preview.company").css({"width" : widthR + "px", "left" :-leftCoord + "px"});
 		}
-
 }
 
 $(document).ready(function() {
@@ -63,18 +62,5 @@ $(document).ready(function() {
 			e.preventDefault();
 			});
 
-			$(".swiper-container").mouseover(function(){
-			if ($("ul.experts").length !==0) {
-					var swiper = new Swiper(".swiper-container", {
-			effect: "flip",
-		    grabCursor: true,
-			// navigation: {
-			// 	nextEl: $("li.swiper-container").mouseover(),
-			// 	prevEl: $("li.swiper-container").mouseout(),
-			// },
-		        });
-			}
-			});
-
-	return false;
+		return false;
 			});
