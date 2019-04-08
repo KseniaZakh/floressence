@@ -200,7 +200,7 @@ footer ul.swiper-wrapper > li > div::after {
 	content: "+";
 	position: absolute;
 	width: 40px;
-	height: 40x;
+	height: 40px;
 	top: calc(50% - 20px);
 	left: calc(50% - 20px);
 	color: rgba(255, 255, 255, 1);
