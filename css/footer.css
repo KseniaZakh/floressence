@@ -65,7 +65,11 @@ footer a:hover {
 	color: rgba(169, 0, 0, 1);
 }
 
-.preview.down_level {
+div.down_level {
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 50px;
 	padding-bottom: 350px;
 	background: url("../img/scentstrip.jpg") no-repeat 50% 0;
 }

@@ -13,6 +13,7 @@ div.container {
 	margin: 0 auto;
 	color: rgb(51, 51, 51);
 	transition: all .25s ease;
+	overflow: hidden;
 }
 
 div.container > span {
