@@ -152,7 +152,6 @@ footer div.gallery {
 }
 
 footer div.gallery > div.swiper {
-	/* width: 100%; */
 	overflow: hidden;
 	margin: 0 auto;
 }
@@ -167,14 +166,15 @@ footer ul.swiper-wrapper {
 	margin: 0;
 }
 
-footer ul.swiper-wrapper > li > div {
+footer ul.swiper-wrapper > li > a {
+	display: block;
 	position: relative;
 	width: inherit;
 	padding-top: 60%;
 	overflow: hidden;
 }
 
-footer ul.swiper-wrapper > li > div > img {
+footer ul.swiper-wrapper > li > a > img {
 	display: block;
 	position: absolute;
 	width: inherit;
@@ -184,7 +184,7 @@ footer ul.swiper-wrapper > li > div > img {
 	transform: translate(-50%, -50%);
 }
 
-footer ul.swiper-wrapper > li > div::before {
+footer ul.swiper-wrapper > li > a::before {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -198,7 +198,7 @@ footer ul.swiper-wrapper > li > div::before {
 
 }
 
-footer ul.swiper-wrapper > li > div::after {
+footer ul.swiper-wrapper > li > a::after {
 	content: "+";
 	position: absolute;
 	width: 40px;
@@ -217,11 +217,11 @@ footer ul.swiper-wrapper > li > div::after {
 	cursor: pointer;
 }
 
-footer ul.swiper-wrapper > li:hover > div::before {
+footer ul.swiper-wrapper > li:hover > a::before {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
-footer ul.swiper-wrapper > li:hover > div::after {
+footer ul.swiper-wrapper > li:hover > a::after {
 	transform: scale(1);
 }
 
@@ -336,7 +336,6 @@ div.gallery > div.button.next::after {
 	article ul.experts > li > div > div.reverse > p {
 		font : normal 18px/20px "Light", Arial, sans-serif;
 	}
-
 }
 
 @media (min-width: 481px) and (max-width: 720px) {

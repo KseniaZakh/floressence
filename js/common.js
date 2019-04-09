@@ -51,7 +51,7 @@ $(document).ready(function() {
 		$("div.preview").css("background-attachment", "fixed");
 		}
 
-		$("div.lb.action, li.swiper-slide").on("click", function(e) {
+		$("div.lb.action").on("click", function(e) {
 			var element = document.createElement("div");
 			element.setAttribute("class", "lbox");
 			element.innerHTML = $(this).html();

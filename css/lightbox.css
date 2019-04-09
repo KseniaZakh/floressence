@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+.lightboxOverlay {
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 9999;
+	background : rgba(0, 0, 0, 0.8);
+	display : none;
+	}
+
+.lightbox {
+	position : absolute;
+	left : 0;
+	width : 100%;
+	z-index : 10000;
+	text-align : center;
+	line-height : 0;
+	font-weight : normal;
+	}
+
+.lightbox .lb-image {
+	display : block;
+	height : auto;
+	}
+
+.lightbox a img { border : none; }
+
+.lb-outerContainer {
+	position : relative;
+	background: #ffffff;
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+	}
+
+.lb-outerContainer:after {
+	content : "";
+	display : table;
+	clear : both;
+	}
+
+.lb-dataContainer {
+	margin : 0 auto;
+	padding-top : 5px;
+	width : 100%;
+	}
+
+.lb-dataContainer:after {
+	content : "";
+	display : table;
+	clear : both;
+	}
+
+.lb-data {
+	padding : 0 4px;
+	color : #bbbbbb;
+	}
+
+.lb-data .lb-details {
+	width : 85%;
+	padding : 10px 0;
+	float : left;
+	text-align : left;
+	line-height : 1.1em;
+	}
+
+.lb-data .lb-caption {
+	font : normal 16px/20px "Light", Arial, sans-serif;
+	color : #ffffff;
+	}
+
+.lb-data {
+	display : block;
+	clear : left;
+	padding-bottom : 1em;
+	font : normal 14px/20px "Light", Arial, sans-serif;
+	color : #999999;
+	}
+
+.lb-data .lb-close {
+	display : block;
+	float : right;
+	width : 30px;
+	height : 30px;
+	margin-top : 10px;
+	background : url("close.png") top right no-repeat;
+	text-align : right;
+	outline: none;
+  	opacity : 0.7;
+	}
+
+.lb-data .lb-close:hover {
+	cursor : pointer;
+	opacity : 1;
+	}
+
+.lb-nav,
+.lb-close,
+.lb-number { display : none !important; }
