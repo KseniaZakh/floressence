@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+div.gallery {
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	max-width: 1170px;
+	z-index: 2;
+}
+
+div.gallery > div.swiper {
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+ul.swiper-wrapper {
+	display: flex;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	width: 2000em;
+	padding: 0;
+	margin: 0;
+}
+/* 
+ul.swiper-wrapper > li {
+	padding: 0 !important;
+	margin-left: 0 !important;
+}
+
+ul.swiper-wrapper > li::before {
+	display: none;
+} */
+
+ul.swiper-wrapper > li > a {
+	display: block;
+	position: relative;
+	width: inherit;
+	padding-top: 60%;
+	overflow: hidden;
+}
+
+ul.swiper-wrapper > li > a > img {
+	display: block;
+	position: absolute;
+	width: inherit;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+ul.swiper-wrapper > li > a::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0);
+	transition: all 0.3s ease;
+	z-index: 1;
+	cursor: pointer;
+
+}
+
+ul.swiper-wrapper > li > a::after {
+	content: "+";
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: calc(50% - 20px);
+	left: calc(50% - 20px);
+	color: rgba(255, 255, 255, 1);
+	background-color : rgba(0, 0, 0, 0.8);
+	font-size: 30px;
+	text-align: center;
+	line-height : 36px;
+	border-radius : 50%;
+	z-index: 2;
+	transform: scale(0);
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+ul.swiper-wrapper > li:hover > a::before {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+ul.swiper-wrapper > li:hover > a::after {
+	transform: scale(1);
+}
+
+div.gallery > div.button {
+	position: absolute;
+	width: 40px;
+	height: 80px;
+	top: calc(50% - 40px);
+	background-color: rgba(119, 119, 119, 1);
+	border-radius: 2px;
+	z-index: 5;
+	cursor: pointer;
+}
+
+div.gallery > div.button.prev {
+	left: 0;
+}
+
+div.gallery > div.button.next {
+	right: 0;
+}
+
+div.gallery > div.button::after {
+	position: absolute;
+	font-size: 50px;
+	line-height: 75px;
+	left: 10px;
+	color: rgba(255, 255, 255, 1);
+	text-align: center;
+}
+
+div.gallery > div.button.prev::after {
+	content: "\2039";
+}
+
+div.gallery > div.button.next::after {
+	content: "\203a";
+}
+
+@media(min-width: 1401px) {
+	div.gallery > div.swiper {
+		max-width: 1170px;
+	}
+}
+
+@media (min-width: 1041px) and (max-width: 1400px) {
+	div.gallery > div.swiper {
+		max-width: calc(100vw - 100px);
+	}
+}
+
+@media (min-width: 721px) and (max-width: 1040px) {
+	div.gallery > div.swiper {
+		max-width: calc(100vw - 80px);
+	}
+}
+
+@media (min-width: 481px) and (max-width: 720px) {
+	div.gallery > div.swiper {
+		max-width: calc(100vw - 60px);
+	}
+}
+
+@media (max-width: 480px) {
+	div.gallery > div.swiper{
+		max-width: calc(100vw - 40px);
+	}
+}

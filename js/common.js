@@ -3,11 +3,11 @@ function resize() {
 				$("div.container").removeClass("opened");
 			}
 
-	if ($(".preview.company").length !=0) {
+	if ($("div.preview.company").length !=0) {
 		var widthR = $(window).width();
 		var cont = $(".content").width();
 		var leftCoord = (widthR - cont) / 2;
-		$(".preview.company").css({"width" : widthR + "px", "left" :-leftCoord + "px"});
+		$("div.preview.company").css({"width" : widthR + "px", "left" :-leftCoord + "px"});
 		}
 }
 

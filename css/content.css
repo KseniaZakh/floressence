@@ -202,7 +202,8 @@ div.text p {
 		padding-bottom: 15px;
 	}
 
-	div.preview > div {
+	div.expertise > div,
+	div.production > div {
 		width: 680px;
 		align-self: center;
 		padding: 50px;
