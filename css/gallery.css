@@ -89,7 +89,7 @@ div.button {
 	top: calc(50% - 50px);
 	background-color: rgba(255, 10, 10, 1);
 	border-radius: 3px;
-	z-index: 42;
+	z-index: 4;
 	cursor: pointer;
 }
 
