@@ -48,6 +48,10 @@ article > div.content ul  {
 	margin-bottom: 20px;
 }
 
+article > div.content ul {
+	margin-top: 20px;
+}
+
 article > div.content ul > li {
 	position: relative;
 	padding-left: 20px;

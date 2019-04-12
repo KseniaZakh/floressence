@@ -88,23 +88,23 @@ div.button {
 	height: 80px;
 	top: calc(50% - 50px);
 	background-color: rgba(255, 10, 10, 1);
-	border-radius: 3px;
 	z-index: 4;
 	cursor: pointer;
 }
 
 div.button::after {
 	position: absolute;
-	font-size: 50px;
-	line-height: 75px;
-	left: 10px;
+	font-size: 30px;
+	line-height: 80px;
+	width: 100%;
 	color: rgba(255, 255, 255, 1);
 	text-align: center;
 	transition: transform 0.25s ease;
 }
 
  div.button.prev::after {
-	content: "\2039";
+	content: "\25C0";
+	left: 5px;
 }
 
  div.button.prev:hover::after {
@@ -112,20 +112,20 @@ div.button::after {
 }
 
  div.button.next::after {
-	content: "\203a";
+	content: "\25B6";
+	right: 5px;
 }
 
 div.button.next:hover::after {
 	transform: translateX(7px);
 }
 
-@media(min-width: 1401px) {
+@media(min-width: 1271px) {
+
 	div.gallery > div.swiper {
 		max-width: 1170px;
 	}
-}
 
-@media(min-width: 1271px) {
 	div.button.prev {
    	left: calc((100vw - 1268px) / 2);
    }
@@ -136,12 +136,17 @@ div.button.next:hover::after {
 }
 
 @media (min-width: 1041px) and (max-width: 1270px) {
+	div.gallery,
+	div.gallery > div.swiper {
+		width: calc(100vw - 118px);
+	}
+
 	div.button.prev {
-   	left: 10px;
+   	left: 2px;
    }
 
     div.button.next {
-   	right: 10px;
+   	right: 2px;
    }
 }
 
@@ -153,6 +158,7 @@ div.button.next:hover::after {
 }
 
 @media (max-width: 1040px) {
+
 	div.button.prev {
    	left: 0;
    }
@@ -165,21 +171,21 @@ div.button.next:hover::after {
 @media (min-width: 721px) and (max-width: 1040px) {
 	div.gallery,
 	div.gallery > div.swiper {
-		width: calc(100vw - 80px);
+		width: calc(100vw - 98px);
 	}
 }
 
 @media (min-width: 481px) and (max-width: 720px) {
 	div.gallery,
 	div.gallery > div.swiper {
-		width: calc(100vw - 60px);
+		width: calc(100vw - 80px);
 	}
 }
 
 @media (max-width: 480px) {
 	div.gallery,
 	div.gallery > div.swiper{
-		width: calc(100vw - 40px);
+		width: calc(100vw - 80px);
 	}
 
 }
