@@ -253,6 +253,12 @@ div.container > div.lbox {
 	div.text_photo > div:first-child {
 		order: 1;
 	}
+
+	div.text_photo > div:first-child,
+	div.photo_text > div:last-child {
+		padding-top: 20px;
+	}
+
 }
 
 @media (max-width: 480px) {
@@ -287,5 +293,10 @@ div.container > div.lbox {
 
 	div.text_photo > div:first-child {
 		order: 1;
+	}
+
+	div.text_photo > div:first-child,
+	div.photo_text > div:last-child {
+		padding-top: 20px;
 	}
 }
