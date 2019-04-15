@@ -150,7 +150,7 @@ div.text p {
 	}
 
 	div.prod_types > ul {
-		margin-top: 40px;
+		padding-top: 40px;
 	}
 
 	div.prod_types > ul > li:not(:last-child) {
