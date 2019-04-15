@@ -4,13 +4,14 @@ div.gallery {
 	position: relative;
 	margin: 0 auto;
 	overflow: hidden;
-	max-width: 1170px;
+	padding-right: 40px;
+	padding-left: 40px;
 	z-index: 2;
 }
 
 div.gallery > div.swiper {
 	overflow: hidden;
-	margin: 0 auto;
+	width: 100%;
 }
 
 ul.swiper-wrapper {
@@ -85,17 +86,25 @@ ul.swiper-wrapper > li:hover > a::after {
 div.button {
 	position: absolute;
 	width: 40px;
-	height: 80px;
-	top: calc(50% - 50px);
+	height: 40px;
+	top: calc(50% - 20px);
 	background-color: rgba(255, 10, 10, 1);
 	z-index: 4;
 	cursor: pointer;
 }
 
+div.button.prev {
+	left: 0;
+}
+
+div.button.next {
+	right: 0;
+}
+
 div.button::after {
 	position: absolute;
 	font-size: 30px;
-	line-height: 80px;
+	line-height: 40px;
 	width: 100%;
 	color: rgba(255, 255, 255, 1);
 	text-align: center;
@@ -111,7 +120,7 @@ div.button::after {
 	transform: translateX(-7px);
 }
 
- div.button.next::after {
+div.button.next::after {
 	content: "\25B6";
 	right: 5px;
 }
@@ -120,72 +129,26 @@ div.button.next:hover::after {
 	transform: translateX(7px);
 }
 
-@media(min-width: 1271px) {
-
-	div.gallery > div.swiper {
+@media(min-width: 1401px) {
+	div.gallery {
 		max-width: 1170px;
 	}
-
-	div.button.prev {
-   	left: calc((100vw - 1268px) / 2);
-   }
-
-    div.button.next {
-   	right: calc((100vw - 1268px) / 2);
-   }
-}
-
-@media (min-width: 1041px) and (max-width: 1270px) {
-	div.gallery,
-	div.gallery > div.swiper {
-		width: calc(100vw - 118px);
-	}
-
-	div.button.prev {
-   	left: 2px;
-   }
-
-    div.button.next {
-   	right: 2px;
-   }
 }
 
 @media (min-width: 1041px) and (max-width: 1400px) {
-	div.gallery,
-	div.gallery > div.swiper {
+	div.gallery {
 		width: calc(100vw - 100px);
 	}
 }
 
-@media (max-width: 1040px) {
-
-	div.button.prev {
-   	left: 0;
-   }
-
-    div.button.next {
-   	right: 0;
-   }
-}
-
 @media (min-width: 721px) and (max-width: 1040px) {
-	div.gallery,
-	div.gallery > div.swiper {
-		width: calc(100vw - 98px);
-	}
-}
-
-@media (min-width: 481px) and (max-width: 720px) {
-	div.gallery,
-	div.gallery > div.swiper {
+	div.gallery {
 		width: calc(100vw - 80px);
 	}
 }
 
-@media (max-width: 480px) {
-	div.gallery,
-	div.gallery > div.swiper{
-		width: calc(100vw - 80px);
+@media (max-width: 720px) {
+	div.gallery {
+		width: 100vw;
 	}
-
 }

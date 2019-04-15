@@ -66,6 +66,7 @@ footer a:hover {
 }
 
 div.down_level {
+	position: relative;
 	width: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;

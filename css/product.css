@@ -3,7 +3,7 @@
 div.preview.product {
 	position: relative;
 	padding-top: 50px;
-	padding-bottom: 80px;
+	padding-bottom: 50px;
 	background-image: url("../img/water.jpg");
 	background-position: 25% 50%;
 	background-size: cover;

@@ -1,215 +1,244 @@
 @charset "UTF-8";
 
 article > div.content,
+article > div.brief,
+article > div.brief blockquote,
+article > div.content ul > li,
+article > div.brief ul > li {
+	margin : 0 auto;
+	}
+
+article > div.content,
 article > div.brief {
-	max-width: 1170px;
-	margin: 0 auto;
-	color: rgba(51, 51, 51, 1);
+	max-width : 1280px;
+	color : rgba(51, 51, 51, 1);
+	}
+
+article h1,
+article h2,
+article h3,
+article > div.brief blockquote {
+	text-align : center;
+	}
+
+article h1,
+article h2,
+article h3,
+article > div.brief blockquote {
+	/* padding-top : 20px; */
+	padding-bottom : 20px;
+	}
+
+article > div.brief blockquote {
+	padding-top : 20px;
 }
+
 
 article h1 {
-	position: relative;
-	text-align: center;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
+	position : relative;
+	}
 
 article h1::after {
-	position: absolute;
-	content: "";
-	width: 80px;
-	height: 4px;
-	bottom: 0;
-	left: calc(50% - 40px);
-	background-color: rgba(255, 10, 10, 1);
-}
+	position : absolute;
+	content : "";
+	width : 80px;
+	height : 4px;
+	bottom : 0;
+	left : calc(50% - 40px);
+	background-color : rgba(255, 10, 10, 1);
+	}
 
-article > div.brief > p {
-	text-align: center;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
+article > div.brief blockquote {
+	max-width : 960px;
+	}
 
 article h2 {
-	text-align: center;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
+	}
 
 article > div.content h3 {
-	padding-top: 20px;
-	padding-bottom: 20px;
 	text-transform: uppercase;
-	text-align: center;
-}
+	}
 
 article > div.content p,
-article > div.content ul  {
-	margin-bottom: 20px;
-}
+article > div.content ul,
+article > div.brief ul  {
+	margin-bottom : 20px;
+	}
 
-article > div.content ul {
-	margin-top: 20px;
-}
+article > div.content ul,
+article > div.brief ul {
+	margin-top : 20px;
+	}
 
-article > div.content ul > li {
-	position: relative;
-	padding-left: 20px;
-	margin: 0 auto;
-}
+article > div.content ul > li,
+article > div.brief ul > li {
+	position : relative;
+	padding-left : 20px;
+	}
 
-article > div.content ul > li::before {
-	position: absolute;
-	content: "";
-	width: 8px;
-	height: 8px;
-	top: 8px;
-	left: 0;
-	background-color: rgba(255, 10, 10, 1);
-	border-radius: 50%;
-}
+article > div.content ul > li::before,
+article > div.brief ul > li::before {
+	position : absolute;
+	content : "";
+	width : 8px;
+	height : 8px;
+	top : 8px;
+	left : 0;
+	background-color : rgba(255, 10, 10, 1);
+	border-radius : 50%;
+	}
 
 @media (min-width: 1401px) {
 	article > div.content,
-	article > div.brief  {
-		padding-top: 40px;
-	}
+	article > div.brief {
+		padding : 30px 60px;
+		}
 
-	article > div.content {
-		padding-bottom: 40px;
-	}
+	article > div.brief blockquote {
+		padding : 30px 0;
+		font : normal 28px/32px "Light", Arial, sans-serif;
+		}
+
+	article > div.brief p,
+	article > div.content p,
+	article > div.content ul,
+	article > div.brief ul  {
+		font: normal 24px/30px "Light", Arial, sans-serif;
+		}
+
+	article h1 {
+		font: normal 40px/46px "Roboto Condensed", Arial, sans-serif;
+		}
+
+	article h2 {
+		font: normal 36px/40px "Roboto Condensed", Arial, sans-serif;
+		}
+
+	article > div.content h3 {
+		font : normal 32px/36px "Light", Arial, sans-serif;
+		}
 }
 
 @media (min-width: 1041px) and (max-width: 1400px)  {
 	article > div.content,
-	article > div.brief  {
-		width: calc(100% - 100px);
-		padding-top: 30px;
-	}
+	article > div.brief {
+		padding : 25px 50px;
+		}
 
-	article > div.content {
-		padding-bottom: 30px;
-	}
-}
+	article > div.brief blockquote {
+		padding : 25px 0;
+		font : normal 26px/30px "Light", Arial, sans-serif;
+		}
 
-@media (min-width: 1041px) {
-	article h2 {
-		font: normal 30px/34px "Roboto Condensed", Arial, sans-serif;
-	}
-
-	article > div.content h3 {
-		font : normal 27px/28px "Light", Arial, sans-serif;
-	}
-
+	article > div.brief p,
 	article > div.content p,
-	article > div.content ul  {
-		font: normal 20px/25px "Light", Arial, sans-serif;
-	}
+	article > div.content ul,
+	article > div.brief ul  {
+		font: normal 22px/28px "Light", Arial, sans-serif;
+		}
 
 	article h1 {
-		font: normal 45px/45px "Roboto Condensed", Arial, sans-serif;
-	}
+		font: normal 38px/42px "Roboto Condensed", Arial, sans-serif;
+		}
 
-	article > div.brief > p {
-		font : normal 26px/27px "Light", Arial, sans-serif;
-	}
+	article h2 {
+		font: normal 34px/38px "Roboto Condensed", Arial, sans-serif;
+		}
+
+	article > div.content h3 {
+		font : normal 30px/34px "Light", Arial, sans-serif;
+		}
 }
 
 @media (min-width: 721px) and (max-width: 1040px) {
 	article > div.content,
-	article > div.brief  {
-		width: calc(100% - 80px);
-		padding-top: 20px;
-	}
+	article > div.brief {
+		padding : 20px 40px;
+		}
 
-	article > div.content {
-		padding-bottom: 20px;
-	}
+	article > div.brief blockquote {
+		padding : 20px 0;
+		font : normal 24px/28px "Light", Arial, sans-serif;
+		}
 
-	article  h2 {
-		font: normal 30px/34px "Roboto Condensed", Arial, sans-serif;
-	}
-
-	article > div.content h3 {
-		font : normal 27px/28px "Light", Arial, sans-serif;
-	}
-
+	article > div.brief p,
 	article > div.content p,
-	article > div.content ul  {
-		font: normal 18px/25px "Light", Arial, sans-serif;
-	}
+	article > div.content ul,
+	article > div.brief ul  {
+		font: normal 20px/26px "Light", Arial, sans-serif;
+		}
 
 	article h1 {
-		font: normal 40px/45px "Roboto Condensed", Arial, sans-serif;
-	}
+		font: normal 36px/40px "Roboto Condensed", Arial, sans-serif;
+		}
 
-	article > div.brief > p {
-		font : normal 26px/27px "Light", Arial, sans-serif;
-	}
+	article h2 {
+		font: normal 32px/36px "Roboto Condensed", Arial, sans-serif;
+		}
+
+	article > div.content h3 {
+		font : normal 28px/32px "Light", Arial, sans-serif;
+		}
 }
 
 @media (min-width: 481px) and (max-width: 720px) {
 	article > div.content,
-	article > div.brief  {
-		width: calc(100% - 60px);
-		padding-top: 10px;
-	}
+	article > div.brief {
+		padding : 15px 30px;
+		}
 
-	article > div.content {
-		padding-bottom: 10px;
-	}
+	article > div.brief blockquote {
+		padding : 15px 0;
+		font : normal 22px/26px "Light", Arial, sans-serif;
+		}
+
+	article > div.brief p,
+	article > div.content p,
+	article > div.content ul,
+	article > div.brief ul  {
+		font: normal 18px/24px "Light", Arial, sans-serif;
+		}
 
 	article h1 {
-		font: normal 36px/40px "Roboto Condensed", Arial, sans-serif;
-	}
+		font: normal 34px/38px "Roboto Condensed", Arial, sans-serif;
+		}
 
 	article h2 {
-		font: normal 26px/28px "Roboto Condensed", Arial, sans-serif;
-	}
+		font: normal 30px/34px "Roboto Condensed", Arial, sans-serif;
+		}
 
 	article > div.content h3 {
-		font : normal 24px/24px "Light", Arial, sans-serif;
-	}
-
-	article > div.content p,
-	article > div.content ul  {
-		font: normal 18px/25px "Light", Arial, sans-serif;
-	}
-
-	article > div.brief > p {
-		font : normal 22px/27px "Light", Arial, sans-serif;
-	}
+		font : normal 26px/30px "Light", Arial, sans-serif;
+		}
 }
 
 @media (max-width: 480px) {
 	article > div.content,
-	article > div.brief  {
-		width: calc(100% - 40px);
-		padding-top: 10px;
-	}
+	article > div.brief {
+		padding : 10px 20px;
+		}
 
-	article > div.content {
-		padding-bottom: 10px;
-	}
+	article > div.brief blockquote {
+		padding : 10px 0;
+		font : normal 20px/24px "Light", Arial, sans-serif;
+		}
+
+	article > div.brief p,
+	article > div.content p,
+	article > div.content ul,
+	article > div.brief ul  {
+		font: normal 16px/22px "Light", Arial, sans-serif;
+		}
 
 	article h1 {
 		font: normal 32px/36px "Roboto Condensed", Arial, sans-serif;
-	}
+		}
 
 	article h2 {
-		font: normal 24px/28px "Roboto Condensed", Arial, sans-serif;
-	}
+		font: normal 28px/32px "Roboto Condensed", Arial, sans-serif;
+		}
 
 	article > div.content h3 {
-		font : normal 21px/21px "Light", Arial, sans-serif;
-	}
-
-	article > div.content p,
-	article > div.content ul  {
-		font: normal 18px/25px "Light", Arial, sans-serif;
-	}
-
-	article > div.brief > p {
-		font : normal 22px/27px "Light", Arial, sans-serif;
-	}
+		font : normal 24px/28px "Light", Arial, sans-serif;
+		}
 }

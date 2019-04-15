@@ -48,7 +48,7 @@ $(document).ready(function() {
 			$("div.container > article > div.video > span").click();
 
 			if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		$("div.preview").css("background-attachment", "fixed");
+		$("div.preview, div.down_level").css("background-attachment", "fixed");
 		}
 
 		$("div.lb.action").on("click", function(e) {
