@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
 div.content > div.records,
-div.content > div.text_photo,
-div.content > div.photo_text,
 div.content > div.evidence_wrap {
 	display: flex;
 	flex-wrap: wrap;
@@ -22,16 +20,8 @@ div.preview.company {
 	background-size: cover;
 }
 
-div.text_photo > p,
-div.photo_text > p {
-	margin-top: 0 !important;
-}
-
 div.text_photo > div > div,
 div.photo_text > div > div {
-	display: block;
-	width: 100%;
-	position: relative;
 	cursor: pointer;
 	transition: all .25s ease;
 }
@@ -106,7 +96,6 @@ div.container > div.lbox {
 		max-width: 90%;
 		margin: auto;
 	}
-
 }
 
 @media all and (orientation: landscape) {
@@ -114,7 +103,6 @@ div.container > div.lbox {
 		max-height: 85%;
 		margin: auto;
 	}
-
 }
 
 @media (min-width: 1041px) {
@@ -129,35 +117,6 @@ div.container > div.lbox {
 		padding-bottom: 40px;
 	}
 
-	div.text_photo,
-	div.photo_text {
-		padding-top: 20px;
-		padding-bottom: 20px;
-	}
-
-	div.text_photo > div:last-child {
-		width: 50%;
-		margin-left: 20px;
-		}
-
-	div.text_photo > div:first-child {
-		width: calc(50% - 20px);
-	}
-
-	div.photo_text > div:first-child {
-		margin-right: 20px;
-		width: 50%;
-	}
-
-	div.photo_text > div:last-child {
-		width: calc(50% - 20px);
-	}
-
-	div.photo_text > div > p,
-	div.text_photo > div > p {
-		margin-top: 0 !important;
-	}
-
 	div.evidence_wrap > div {
 		width: calc((100% - 60px) / 3);
 	}
@@ -168,36 +127,6 @@ div.container > div.lbox {
 }
 
 @media (min-width: 721px) and (max-width: 1040px) {
-
-	div.text_photo,
-	div.photo_text {
-		padding-top: 20px;
-		padding-bottom: 20px;
-	}
-
-	div.text_photo > div:last-child {
-		width: 50%;
-		margin-left: 20px;
-		margin-bottom: 20px;
-		}
-
-	div.text_photo > div:first-child {
-		width: calc(50% - 20px);
-	}
-
-	div.photo_text > div:first-child {
-		margin-right: 20px;
-		width: 50%;
-	}
-
-	div.photo_text > div:last-child {
-		width: calc(50% - 20px);
-	}
-
-	div.photo_text > div > p,
-	div.text_photo > div > p {
-		margin-top: 0 !important;
-	}
 
 	div.evidence_wrap > div {
 		width: calc((100% - 40px) / 3);
@@ -235,30 +164,6 @@ div.container > div.lbox {
 		font : normal 28px/28px "Light", Arial, sans-serif;
 		padding-bottom: 20px;
 	}
-
-	div.photo_text > div,
-	div.text_photo > div {
-		width: 100%;
-	}
-
-	div.photo_text > div > p,
-	div.text_photo > div > p {
-		margin-bottom: 0 !important;
-	}
-
-	div.text_photo > div:last-child {
-		order: 0;
-	}
-
-	div.text_photo > div:first-child {
-		order: 1;
-	}
-
-	div.text_photo > div:first-child,
-	div.photo_text > div:last-child {
-		padding-top: 20px;
-	}
-
 }
 
 @media (max-width: 480px) {
@@ -275,28 +180,5 @@ div.container > div.lbox {
 		width: 100%;
 		font : normal 24px/24px "Light", Arial, sans-serif;
 		padding-bottom: 20px;
-	}
-
-	div.photo_text > div,
-	div.text_photo > div {
-		width: 100%;
-	}
-
-	div.photo_text > div > p,
-	div.text_photo > div > p {
-		margin-bottom: 0 !important;
-	}
-
-	div.text_photo > div:last-child {
-		order: 0;
-	}
-
-	div.text_photo > div:first-child {
-		order: 1;
-	}
-
-	div.text_photo > div:first-child,
-	div.photo_text > div:last-child {
-		padding-top: 20px;
 	}
 }

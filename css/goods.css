@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+div.photo_text > div > img {
+	width: 100%;
+	height: auto;
+}
+
+@media (max-width: 720px) {
+	div.photo_text {
+		padding-top: 30px;
+	}
+}

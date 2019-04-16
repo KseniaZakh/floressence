@@ -149,6 +149,6 @@ div.button.next:hover::after {
 
 @media (max-width: 720px) {
 	div.gallery {
-		width: 100vw;
+		width: calc(100vw - 40px);
 	}
 }

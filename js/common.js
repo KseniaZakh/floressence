@@ -1,4 +1,8 @@
 function resize() {
+	if ($("div.container > footer").length!=0) {
+		$("div.container").css({"padding-bottom" : $("div.container > footer").outerHeight() + "px"});
+	}
+
 	if ($("nav").length!=0 && $("div.container").hasClass("opened")) {
 				$("div.container").removeClass("opened");
 			}
@@ -9,7 +13,8 @@ function resize() {
 		var leftCoord = (widthR - cont) / 2;
 		$("div.preview.company").css({"width" : widthR + "px", "left" :-leftCoord + "px"});
 		}
-}
+
+	}
 
 var gallery = null;
 
@@ -63,6 +68,13 @@ $(document).ready(function() {
 			$(this).remove();
 			e.preventDefault();
 			});
+
+			if ($("div.down_level > div.gallery").length !== 0) {
+				$("div.down_level").css({"padding-bottom" : 50 + "px"});
+			}
+			else {
+				$("div.down_level").css({"padding-bottom" : 350 + "px"});
+			}
 
 			if ($("div.swiper").length !== 0 &&
 				$("div.swiper > ul > li").length > 2) {
