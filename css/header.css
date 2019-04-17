@@ -103,6 +103,7 @@ header ul.lang_choice {
 	width: 80px;
 	height: 30px;
 	padding: 0;
+	margin: 0;
 }
 
 li.eng, li.fr {
