@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+div.preview > div.preview_wrap {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+div.preview.expertise {
+	background-image: url("../img/fleurs.jpg");
+	background-position: 25% 50%;
+}
+
+div.preview.production {
+	background-image: url("../img/drop.jpg");
+	background-position: 50% 50%;
+}
+
+div.preview > div.preview_wrap > div {
+	background-color: rgba(255, 255, 255, .8);
+}
+
+/* div.preview_wrap p {
+	margin-bottom: 20px;
+} */
+
+div.preview.expertise > div.preview_wrap > div {
+	margin-right : auto;
+	}
+
+div.preview.production > div.preview_wrap > div {
+	margin-left : auto;
+	}
+
+div.preview > div.preview_wrap > div a::after {
+	content: "\203A";
+	position: absolute;
+	width: 20px;
+	height: 25px;
+	text-align: center;
+	transition: all .25s ease;
+}
+
+div.preview > div.preview_wrap > div a:hover {
+	color : rgba(169, 0, 0, 1);
+	}
+
+div.preview > div.preview_wrap > div a:hover::after {
+	transform: translateX(5px);
+}
+
+div.preview > div.preview_wrap > div h3 {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+div.preview > div.preview_wrap > div a {
+	color: rgba(214, 0, 0, 1);
+	transition : all .25s ease;
+}
+
+@media (min-width: 1041px) and (max-width: 1400px) {
+	div.preview {
+		padding : 120px 0;
+		}
+
+	div.preview > div.preview_wrap {
+		padding : 0 60px;
+		}
+
+	div.preview > div.preview_wrap > div {
+		width : 50%;
+		padding : 60px;
+		}
+}
+
+@media (min-width: 1041px) and (max-width: 1400px) {
+	div.preview {
+		padding : 100px 0;
+		}
+
+	div.preview > div.preview_wrap {
+		padding : 0 50px;
+		}
+
+	div.preview > div.preview_wrap > div {
+		width : 60%;
+		padding : 50px;
+		}
+	}
+
+@media (min-width: 721px) and (max-width: 1040px) {
+	div.preview {
+		padding : 80px 0;
+		}
+
+	div.preview > div.preview_wrap {
+		padding : 0 40px;
+		}
+
+	div.preview > div.preview_wrap > div {
+		width : 75%;
+		padding : 40px;
+		}
+}
+
+@media (min-width: 481px) and (max-width: 1040px) {
+	div.preview {
+		padding : 60px 0;
+		}
+
+	div.preview > div.preview_wrap {
+		padding : 0 30px;
+		}
+
+	div.preview > div.preview_wrap > div {
+		width : 90%;
+		padding : 30px;
+		}
+}
+
+@media (min-width: 481px) and (max-width: 720px) {
+	div.preview_wrap,
+	div.text_container {
+		width: calc(100% - 60px);
+	}
+
+	div.preview_wrap > div {
+		padding: 30px;
+	}
+}
+
+@media (max-width: 480px) {
+	div.preview {
+		padding : 40px 0;
+		}
+
+	div.preview > div.preview_wrap {
+		padding : 0 20px;
+		}
+
+	div.preview > div.preview_wrap > div {
+		width : 100%;
+		padding : 20px;
+		}
+}
