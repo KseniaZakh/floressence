@@ -3,6 +3,7 @@
 article > div.content,
 article > div.brief,
 article > div.brief blockquote,
+article > div.content blockquote,
 article > div.content ul > li,
 article > div.brief ul > li {
 	margin : 0 auto;
@@ -17,7 +18,8 @@ article > div.brief {
 article h1,
 article h2,
 article h3,
-article > div.brief blockquote {
+article > div.brief blockquote,
+article > div.content blockquote, {
 	text-align : center;
 	}
 
@@ -26,8 +28,7 @@ article > div.content h2,
 article > div.content h3,
 article > div.brief h1,
 article > div.brief h2,
-article > div.brief h3,
-article > div.brief blockquote {
+article > div.brief h3 {
 	padding-bottom : 20px;
 	}
 
@@ -45,7 +46,8 @@ article h1::after {
 	background-color : rgba(255, 10, 10, 1);
 	}
 
-article > div.brief blockquote {
+article > div.brief blockquote,
+article > div.content blockquote {
 	max-width : 960px;
 	}
 
@@ -108,19 +110,15 @@ article > div.brief ul > li::before {
 		}
 
 		article > div.brief blockquote,
-		div.preview > div.preview_wrap > div h3 {
+		article > div.content blockquote {
 				font : normal 28px/32px "Light", Arial, sans-serif;
+				padding-top : 30px;
 		}
-
-	article > div.brief blockquote {
-		padding-top : 30px;
-	}
 
 	article > div.brief,
 	article > div.content,
 	article > div.content ul,
-	article > div.brief ul,
-	div.preview > div.preview_wrap  {
+	article > div.brief ul	  {
 		font: normal 24px/30px "Light", Arial, sans-serif;
 		}
 
@@ -132,8 +130,7 @@ article > div.brief ul > li::before {
 		font: normal 36px/40px "Roboto Condensed", Arial, sans-serif;
 		}
 
-	article > div.content h3,
-	div.prod_types > ul > li > a > span  {
+	article > div.content h3  {
 		font : normal 32px/36px "Light", Arial, sans-serif;
 		}
 }
@@ -177,19 +174,15 @@ article > div.brief ul > li::before {
 		}
 
 	article > div.brief blockquote,
-	div.preview > div.preview_wrap > div h3 {
+	article > div.content blockquote {
 		font : normal 26px/30px "Light", Arial, sans-serif;
-		}
-
-		article > div.brief blockquote {
-			padding-top : 25px;
+		padding-top : 25px;
 		}
 
 	article > div.brief,
 	article > div.content,
 	article > div.content ul,
-	article > div.brief ul,
-	div.preview > div.preview_wrap  {
+	article > div.brief ul  {
 		font: normal 22px/28px "Light", Arial, sans-serif;
 		}
 
@@ -201,8 +194,7 @@ article > div.brief ul > li::before {
 		font: normal 34px/38px "Roboto Condensed", Arial, sans-serif;
 		}
 
-	article > div.content h3,
-	div.prod_types > ul > li > a > span {
+	article > div.content h3 {
 		font : normal 30px/34px "Light", Arial, sans-serif;
 		}
 }
@@ -213,20 +205,16 @@ article > div.brief ul > li::before {
 		padding : 20px 40px;
 		}
 
-	div.preview > div.preview_wrap > div h3,
+	article > div.content blockquote,
 	article > div.brief blockquote {
 		font : normal 24px/28px "Light", Arial, sans-serif;
-		}
-
-		article > div.brief blockquote {
-			padding-top: 20px;
+		padding-top: 20px;
 		}
 
 	article > div.brief,
 	article > div.content,
 	article > div.content ul,
-	article > div.brief ul,
-	div.preview > div.preview_wrap  {
+	article > div.brief ul  {
 		font: normal 20px/26px "Light", Arial, sans-serif;
 		}
 
@@ -238,8 +226,7 @@ article > div.brief ul > li::before {
 		font: normal 32px/36px "Roboto Condensed", Arial, sans-serif;
 		}
 
-	article > div.content h3,
-	div.prod_types > ul > li > a > span  {
+	article > div.content h3  {
 		font : normal 28px/32px "Light", Arial, sans-serif;
 		}
 
@@ -280,20 +267,16 @@ article > div.brief ul > li::before {
 		padding : 15px 30px;
 		}
 
-		div.preview > div.preview_wrap > div h3,
+		article > div.content blockquote,
 		article > div.brief blockquote {
 			font : normal 22px/26px "Light", Arial, sans-serif;
-			}
-
-			article > div.brief blockquote {
-				padding-top : 15px;
+			padding-top : 15px;
 			}
 
 	article > div.brief,
 	article > div.content,
 	article > div.content ul,
-	article > div.brief ul,
-	div.preview > div.preview_wrap   {
+	article > div.brief ul   {
 		font: normal 18px/24px "Light", Arial, sans-serif;
 		}
 
@@ -305,8 +288,7 @@ article > div.brief ul > li::before {
 		font: normal 30px/34px "Roboto Condensed", Arial, sans-serif;
 		}
 
-	article > div.content h3,
-	div.prod_types > ul > li > a > span {
+	article > div.content h3 {
 		font : normal 26px/30px "Light", Arial, sans-serif;
 		}
 
@@ -340,20 +322,16 @@ article > div.brief ul > li::before {
 		padding : 10px 20px;
 		}
 
-	article > div.brief blockquote {
+	article > div.brief blockquote,
+	article > div.content blockquote  {
+		font : normal 20px/24px "Light", Arial, sans-serif;
 		padding-top : 10px;
 	}
-
-		div.preview > div.preview_wrap > div h3,
-		article > div.brief blockquote {
-			font : normal 20px/24px "Light", Arial, sans-serif;
-			}
 
 	article > div.brief p,
 	article > div.content p,
 	article > div.content ul,
-	article > div.brief ul,
-	div.preview > div.preview_wrap   {
+	article > div.brief ul  {
 		font: normal 16px/22px "Light", Arial, sans-serif;
 		}
 
@@ -365,8 +343,7 @@ article > div.brief ul > li::before {
 		font: normal 28px/32px "Roboto Condensed", Arial, sans-serif;
 		}
 
-	article > div.content h3,
-	div.prod_types > ul > li > a > span {
+	article > div.content h3 {
 		font : normal 24px/28px "Light", Arial, sans-serif;
 		}
 

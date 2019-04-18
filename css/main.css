@@ -1,9 +1,16 @@
 @charset "UTF-8";
 
+div.preview {
+	width : 100%;
+	background-size : cover;
+	background-repeat : no-repeat;
+	overflow : hidden;
+	}
+
 div.preview > div.preview_wrap {
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 1280px;
+	max-width: 1170px;
 	margin: 0 auto;
 }
 
@@ -20,10 +27,6 @@ div.preview.production {
 div.preview > div.preview_wrap > div {
 	background-color: rgba(255, 255, 255, .8);
 }
-
-/* div.preview_wrap p {
-	margin-bottom: 20px;
-} */
 
 div.preview.expertise > div.preview_wrap > div {
 	margin-right : auto;
@@ -52,7 +55,7 @@ div.preview > div.preview_wrap > div a:hover::after {
 
 div.preview > div.preview_wrap > div h3 {
 	text-transform: uppercase;
-	text-align: center;
+	/* text-align: center; */
 }
 
 div.preview > div.preview_wrap > div a {
@@ -60,13 +63,14 @@ div.preview > div.preview_wrap > div a {
 	transition : all .25s ease;
 }
 
-@media (min-width: 1041px) and (max-width: 1400px) {
+@media (min-width: 1400px) {
 	div.preview {
 		padding : 120px 0;
 		}
 
 	div.preview > div.preview_wrap {
 		padding : 0 60px;
+		font: normal 24px/30px "Light", Arial, sans-serif;
 		}
 
 	div.preview > div.preview_wrap > div {
@@ -82,11 +86,16 @@ div.preview > div.preview_wrap > div a {
 
 	div.preview > div.preview_wrap {
 		padding : 0 50px;
+		font: normal 22px/28px "Light", Arial, sans-serif;
 		}
 
 	div.preview > div.preview_wrap > div {
 		width : 60%;
 		padding : 50px;
+		}
+
+		div.preview > div.preview_wrap > div h3 {
+			font : normal 26px/30px "Light", Arial, sans-serif;
 		}
 	}
 
@@ -97,38 +106,37 @@ div.preview > div.preview_wrap > div a {
 
 	div.preview > div.preview_wrap {
 		padding : 0 40px;
+		font: normal 20px/26px "Light", Arial, sans-serif;
 		}
 
 	div.preview > div.preview_wrap > div {
 		width : 75%;
 		padding : 40px;
 		}
+
+	div.preview > div.preview_wrap > div h3 {
+		font : normal 24px/28px "Light", Arial, sans-serif;
+		}
 }
 
-@media (min-width: 481px) and (max-width: 1040px) {
+@media (min-width: 481px) and (max-width: 720px) {
 	div.preview {
 		padding : 60px 0;
 		}
 
 	div.preview > div.preview_wrap {
 		padding : 0 30px;
+		font: normal 18px/24px "Light", Arial, sans-serif;
 		}
 
 	div.preview > div.preview_wrap > div {
 		width : 90%;
 		padding : 30px;
 		}
-}
 
-@media (min-width: 481px) and (max-width: 720px) {
-	div.preview_wrap,
-	div.text_container {
-		width: calc(100% - 60px);
-	}
-
-	div.preview_wrap > div {
-		padding: 30px;
-	}
+		div.preview > div.preview_wrap > div h3 {
+			font : normal 22px/26px "Light", Arial, sans-serif;
+		}
 }
 
 @media (max-width: 480px) {
@@ -138,10 +146,15 @@ div.preview > div.preview_wrap > div a {
 
 	div.preview > div.preview_wrap {
 		padding : 0 20px;
+		font: normal 16px/22px "Light", Arial, sans-serif;
 		}
 
 	div.preview > div.preview_wrap > div {
 		width : 100%;
 		padding : 20px;
+		}
+
+		div.preview > div.preview_wrap > div h3 {
+			font : normal 20px/24px "Light", Arial, sans-serif;
 		}
 }

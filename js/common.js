@@ -45,12 +45,12 @@ $(document).ready(function() {
 					}
 				});
 
-				$("div.container > article > div.video > span").on("click", function() {
+				$("div.video > span").on("click", function() {
 				setTimeout(function(){
-					$("div.container > article > div.video > video").get(0).play();
+					$("div.video > video").get(0).play();
 				}, 300);
 				});
-			$("div.container > article > div.video > span").click();
+			$("div.video > span").click();
 
 			if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		$("div.preview, div.down_level").css("background-attachment", "fixed");
@@ -69,12 +69,12 @@ $(document).ready(function() {
 			e.preventDefault();
 			});
 
-			if ($("div.down_level > div.gallery").length !== 0) {
-				$("div.down_level").css({"padding-bottom" : 50 + "px"});
-			}
-			else {
-				$("div.down_level").css({"padding-bottom" : 350 + "px"});
-			}
+			// if ($("div.down_level > div.gallery").length !== 0) {
+			// 	$("div.down_level").css({"padding-bottom" : 50 + "px"});
+			// }
+			// else {
+			// 	$("div.down_level").css({"padding-bottom" : 350 + "px"});
+			// }
 
 			if ($("div.swiper").length !== 0 &&
 				$("div.swiper > ul > li").length > 2) {

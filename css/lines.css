@@ -65,6 +65,10 @@ div.prod_types > ul > li > a:hover > img {
 	div.prod_types > ul > li:not(:last-child) {
 		margin-right : 2%;
 		}
+
+	div.prod_types > ul > li > a > span {
+		font : normal 32px/36px "Light", Arial, sans-serif;
+		}
 }
 
 @media (min-width: 1041px) and (max-width: 1400px) {
@@ -79,6 +83,10 @@ div.prod_types > ul > li > a:hover > img {
 	div.prod_types > ul > li:not(:last-child) {
 		margin-right : 2%;
 		}
+
+		div.prod_types > ul > li > a > span {
+			font : normal 30px/34px "Light", Arial, sans-serif;
+			}
 }
 
 @media (min-width: 721px) and (max-width: 1040px) {
@@ -97,6 +105,10 @@ div.prod_types > ul > li > a:hover > img {
 	div.prod_types > ul > li:nth-child(2) {
 		margin-bottom : 4%;
 		}
+
+		div.prod_types > ul > li > a > span {
+			font : normal 28px/32px "Light", Arial, sans-serif;
+			}
 }
 
 @media (min-width: 481px) and (max-width: 720px) {
@@ -114,6 +126,10 @@ div.prod_types > ul > li > a:hover > img {
 	div.prod_types > ul > li:first-child,
 	div.prod_types > ul > li:nth-child(2) {
 		margin-bottom : 4%;
+		}
+
+	div.prod_types > ul > li > a > span {
+		font : normal 26px/30px "Light", Arial, sans-serif;
 		}
 }
 
@@ -133,4 +149,8 @@ div.prod_types > ul > li > a:hover > img {
 	div.prod_types > ul > li:nth-child(2) {
 		margin-bottom : 2%;
 		}
+
+	div.prod_types > ul > li > a > span {
+		font : normal 24px/28px "Light", Arial, sans-serif;
+			}
 }

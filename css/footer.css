@@ -3,7 +3,9 @@
 footer {
 	position: absolute;
 	bottom: 0;
+	left: 0;
 	width: 100%;
+	z-index: 1;
 }
 
 .footer_wrapper {
@@ -69,8 +71,10 @@ div.down_level {
 	width: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding-top: 50px;
+	padding: 50px 0;
+	min-height: 400px;
 	background: url("../img/scentstrip.jpg") no-repeat 50% 0;
+	box-sizing: border-box;
 }
 
 @media (min-width: 1401px) {
