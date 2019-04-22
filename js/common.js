@@ -14,9 +14,13 @@ function resize() {
 		$("div.preview.company").css({"width" : widthR + "px", "left" :-leftCoord + "px"});
 		}
 
-	}
+	setTimeout (function () {
+		if (!points) {
+			pointsSwipe();
+		}
+	}, 100);
 
-var gallery = null;
+	}
 
 $(document).ready(function() {
 
@@ -69,16 +73,9 @@ $(document).ready(function() {
 			e.preventDefault();
 			});
 
-			// if ($("div.down_level > div.gallery").length !== 0) {
-			// 	$("div.down_level").css({"padding-bottom" : 50 + "px"});
-			// }
-			// else {
-			// 	$("div.down_level").css({"padding-bottom" : 350 + "px"});
-			// }
-
 			if ($("div.swiper").length !== 0 &&
 				$("div.swiper > ul > li").length > 2) {
-    	gallery = new Swiper("div.swiper", {
+    	 new Swiper("div.swiper", {
     		loop: true,
     		slidesPerView: 4,
     		spaceBetween: 20,
@@ -91,12 +88,8 @@ $(document).ready(function() {
 				},
 				1040: {
 					slidesPerView: 3
-				}
-    			},
-    		navigation: {
-    			nextEl: "div.next",
-    			prevEl: "div.prev"
-  				}
+					}
+    			}
     		});
     	}
 

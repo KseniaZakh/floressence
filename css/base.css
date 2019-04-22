@@ -135,38 +135,6 @@ article > div.brief ul > li::before {
 		}
 }
 
-@media (min-width: 1040px) {
-
-	div.text_photo,
-	div.photo_text {
-		padding-top: 20px;
-		padding-bottom: 20px;
-	}
-
-	div.text_photo > div:last-child {
-		width: 50%;
-		margin-left: 20px;
-		}
-
-	div.text_photo > div:first-child {
-		width: calc(50% - 20px);
-	}
-
-	div.photo_text > div:first-child {
-		margin-right: 20px;
-		width: 50%;
-	}
-
-	div.photo_text > div:last-child {
-		width: calc(50% - 20px);
-	}
-
-	div.photo_text > div > p,
-	div.text_photo > div > p {
-		margin-top: 0 !important;
-	}
-}
-
 @media (min-width: 1041px) and (max-width: 1400px)  {
 	article > div.content,
 	article > div.brief {
@@ -229,36 +197,6 @@ article > div.brief ul > li::before {
 	article > div.content h3  {
 		font : normal 28px/32px "Light", Arial, sans-serif;
 		}
-
-		div.text_photo,
-		div.photo_text {
-			padding-top: 20px;
-			padding-bottom: 20px;
-		}
-
-		div.text_photo > div:last-child {
-			width: 50%;
-			margin-left: 20px;
-			margin-bottom: 20px;
-			}
-
-		div.text_photo > div:first-child {
-			width: calc(50% - 20px);
-		}
-
-		div.photo_text > div:first-child {
-			margin-right: 20px;
-			width: 50%;
-		}
-
-		div.photo_text > div:last-child {
-			width: calc(50% - 20px);
-		}
-
-		div.photo_text > div > p,
-		div.text_photo > div > p {
-			margin-top: 0 !important;
-		}
 }
 
 @media (min-width: 481px) and (max-width: 720px) {
@@ -291,29 +229,6 @@ article > div.brief ul > li::before {
 	article > div.content h3 {
 		font : normal 26px/30px "Light", Arial, sans-serif;
 		}
-
-		div.photo_text > div,
-		div.text_photo > div {
-			width: 100%;
-		}
-
-		div.photo_text > div > p,
-		div.text_photo > div > p {
-			margin-bottom: 0 !important;
-		}
-
-		div.text_photo > div:last-child {
-			order: 0;
-		}
-
-		div.text_photo > div:first-child {
-			order: 1;
-		}
-
-		div.text_photo > div:first-child,
-		div.photo_text > div:last-child {
-			padding-top: 20px;
-		}
 }
 
 @media (max-width: 480px) {
@@ -345,28 +260,5 @@ article > div.brief ul > li::before {
 
 	article > div.content h3 {
 		font : normal 24px/28px "Light", Arial, sans-serif;
-		}
-
-		div.photo_text > div,
-		div.text_photo > div {
-			width: 100%;
-		}
-
-		div.photo_text > div > p,
-		div.text_photo > div > p {
-			margin-bottom: 0 !important;
-		}
-
-		div.text_photo > div:last-child {
-			order: 0;
-		}
-
-		div.text_photo > div:first-child {
-			order: 1;
-		}
-
-		div.text_photo > div:first-child,
-		div.photo_text > div:last-child {
-			padding-top: 20px;
 		}
 }
